@@ -1,0 +1,14 @@
+{
+  "name": "ProjectGamma",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/CodeWaala/ProjectGamma.git",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "mysql": "^2.15.0",
+    "sequelize": "^4.37.6"
+  }
+}
