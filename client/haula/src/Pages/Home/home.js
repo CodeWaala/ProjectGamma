@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { MyNavbar } from '../../Shared/nav/nav2';
 import { Footer } from '../../Shared/footer/footer';
 import { Image } from 'react-bootstrap';
+import { Parallax } from 'react-spring'
 
 const imgSource = require("./components/images/background1.jpg")
 
