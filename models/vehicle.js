@@ -1,21 +1,29 @@
-module.exports = function(sequelize, DataTypes) {
-  const Vehicle = sequelize.define("vehicle", {
+'use strict';
+
+module.exports = (sequelize, DataTypes) => {
+  var Vehicle = sequelize.define("Vehicle", {
     licenseplate: {
-      type: DataTypes.STRING(7)
+      type: DataTypes.STRING(7),
+      allowNull: false
     },
     make: {
-      type: DataTypes.String(50)
+      type: DataTypes.STRING(50),
+      allowNull: true
     },
     year: {
-      type: DataTypes.INTEGER
+      type: DataTypes.INTEGER,
+      allowNull: true
     },
     model: {
-      type: DataTypes.STRING(50)
-    },
+      type: DataTypes.STRING(50),
+      allowNull : true
+    }
+  }, {
+      timestamps:true
   });
 
   Vehicle.associate = function(models) {
-    Vehicle.belongs(models.mover);
+    Vehicle.belongsTo(models.Mover);
   };
 
   return Vehicle;
