@@ -1,5 +1,7 @@
-module.exports = function(sequelize, DataTypes) {
-  const ImageStore = sequelize.define("imagestore", {
+'use strict';
+
+module.exports = (sequelize, DataTypes) => {
+  var ImageStore = sequelize.define("ImageStore", {
     imagetype: {
       type: DataTypes.STRING,
       allowNull: false
@@ -13,10 +15,13 @@ module.exports = function(sequelize, DataTypes) {
     imagename: {
       type: DataTypes.STRING
     }
+  }, {
+      timestamps : true
   });
 
   ImageStore.associate = function(models){
       //images belongs to order table
+      ImageStore.belongsTo(models.Customer);
   }
 
   return ImageStore;

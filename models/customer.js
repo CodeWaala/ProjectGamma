@@ -1,33 +1,35 @@
-module.exports = function(sequelize, DataTypes) {
-  const Customer = sequelize.define("customer", {
-    id: {
-      autoIncrement: true,
-      primaryKey: true,
-      type: DataTypes.INTEGER
-    },
+'use strict';
+
+module.exports = (sequelize, DataTypes) => {
+  var Customer = sequelize.define("Customer", {
     firstname: {
       type: DataTypes.STRING(50),
-      notEmpty: true
+      allowNull: false
     },
     lastname: {
       type: DataTypes.STRING(50),
-      notEmpty: true
+      allowNull: false
     },
     phonenum: {
       type: DataTypes.STRING(10),
-      notEmpty: true
+      allowNull: true
     },
     cardnum: {
       type: DataTypes.BIGINT,
-      notEmpty: true,
+      allowNull: false,
        validate:{
         isCreditCard: true
        }
     },
+
+  }, {
+      timestamps:true
   });
 
   Customer.associate = function(models) {
     Customer.belongsTo(models.User);
+    Customer.hasMany(models.ImageStore);  //ask Joey
+    Customer.hasMany(models.Order);
   };
 
   return Customer;

@@ -1,9 +1,14 @@
-module.exports = function(sequelize, DataTypes) {
-  const Mover = sequelize.define("customer", {
-    id: {
-      autoIncrement: true,
-      primaryKey: true,
-      type: DataTypes.INTEGER
+"use strict";
+
+module.exports = (sequelize, DataTypes) => {
+  var Mover = sequelize.define("Mover", {
+    firstname: {
+      type: DataTypes.STRING(50),
+      allowNull: false
+    },
+    lastname: {
+      type: DataTypes.STRING(50),
+      allowNull: true
     },
     checkingaccount: {
       type: DataTypes.INTEGER
@@ -22,8 +27,15 @@ module.exports = function(sequelize, DataTypes) {
     },
     phonenum: {
       type: DataTypes.STRING(10)
-    },
+    }
+  },{
+      timestamps:true
   });
 
-  return Customer;
+  Mover.associate = function(models) {
+    Mover.belongsTo(models.User);
+    Mover.hasOne(models.Vehicle);
+  };
+
+  return Mover;
 };

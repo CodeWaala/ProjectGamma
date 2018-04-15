@@ -1,35 +1,36 @@
-const express = require('express');
-const passport   = require('passport')
-const session    = require('express-session')
-const bodyParser = require('body-parser')
-const mysql = require('mysql');
+// *****************************************************************************
+// Server.js - This file is the initial starting point for the Node/Express server.
+//
+// ******************************************************************************
+// *** Dependencies
+// =============================================================
+var express = require("express");
+var bodyParser = require("body-parser");
 
-//Express App
+// Sets up the Express App
+// =============================================================
 var app = express();
 var PORT = process.env.PORT || 8080;
 
-//Models
-const db = require("./models");
+// Requiring our models for syncing
+var db = require("./models");
 
-// BodyParser
+// Sets up the Express app to handle data parsing
+
+// parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
+// parse application/json
 app.use(bodyParser.json());
 
-//Sync Database
-db.sequelize.sync().then(function() {
+// Static directory
 
-    app.listen(PORT, function(err) {
- 
-        if (!err)
-            console.log("connection is working");
-        else console.log(err)
-     
-    });
- 
-    console.log('Database is working')
- 
-}).catch(function(err) {
- 
-    console.log(err, "Database error")
- 
+// Routes
+// =============================================================
+
+// Syncing our sequelize models and then starting our Express app
+// =============================================================
+db.sequelize.sync({force:true}).then(function() {
+  app.listen(PORT, function() {
+    console.log("App listening on PORT " + PORT);
+  });
 });

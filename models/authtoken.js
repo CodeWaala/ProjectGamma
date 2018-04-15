@@ -1,10 +1,11 @@
+'use strict';
 module.exports = (sequelize, DataTypes) => {
 
   const AuthToken = sequelize.define('AuthToken', {
     token: {
       type: DataTypes.STRING,
       allowNull: false,
-    }
+    },
   }, {});
 
   // set up the associations so we can make queries that include

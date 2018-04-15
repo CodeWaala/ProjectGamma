@@ -1,5 +1,6 @@
-module.exports = function(sequelize, DataTypes) {
-  const Order = sequelize.define("order", {
+'use strict';
+module.exports = (sequelize, DataTypes) => {
+  var Order = sequelize.define("Order", {
     orderstatus: {
       type: DataTypes.ENUM("accepted", "canceled", "pending", "completed"),
       defaultValue: "pending"
@@ -19,10 +20,15 @@ module.exports = function(sequelize, DataTypes) {
     totaltime: {
       type: DataTypes.NUMERIC
     },
+  }, {
+      timestamps:true
   });
 
   Order.associate = function(models) {
     //Order belongs to Customer and to Mover when accepted
+    Order.belongsTo(models.Customer);
+    //Order.belongsToMany(models.Mover, {through : "MoverOrders"});
+    Order.belongsTo(models.Mover);
   };
 
   return Order;

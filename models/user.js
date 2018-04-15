@@ -1,13 +1,14 @@
-module.exports = function(sequelize, DataTypes) {
-  const User = sequelize.define("user", {
-    id: {
-      autoIncrement: true,
-      primaryKey: true,
-      type: DataTypes.INTEGER
-    },
+"use strict";
+
+module.exports = (sequelize, DataTypes) => {
+  var User = sequelize.define("User", {
     username: {
       type: DataTypes.STRING,
       unique: true,
+      allowNull: false
+    },
+    password: {
+      type: DataTypes.STRING,
       allowNull: false
     },
     email: {
@@ -23,14 +24,17 @@ module.exports = function(sequelize, DataTypes) {
       defaultValue: "active"
     },
     profile: {
-      type: DataTypes.STRING,
+      type: DataTypes.ENUM("Mover", "Customer", "Admin"),
+      defaultValue: "Customer",
       allowNull: false
-    },
+    }
+  }, {
+      timestamps:true
   });
 
   User.associate = function(models) {
     // associations can be defined here
-    User.hasMany(models.authtoken);
+    //User.hasMany(models.AuthToken);
   };
 
   return User;
