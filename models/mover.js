@@ -49,6 +49,7 @@ module.exports = (sequelize, DataTypes) => {
   Mover.associate = function(models) {
     Mover.belongsTo(models.User);
     Mover.hasOne(models.Vehicle);
+    Mover.belongsToMany(models.Order, {through: "MoverOrders" });
   };
 
   return Mover;

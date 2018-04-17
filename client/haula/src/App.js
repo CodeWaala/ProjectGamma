@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { MyNavbar } from './Shared/nav/nav2';
 import { LogIn } from './Pages/LogIn/loginpage'
 import { Footer } from './Shared/footer/footer';
-import { Home } from './Pages/Home/home'
+import { Home } from './Pages/Home/home';
 
 class App extends Component {
   render() {

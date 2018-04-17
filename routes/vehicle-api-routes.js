@@ -14,7 +14,7 @@ router.get("/api/vehicles", (req,res) => {
 
 //get the vehicle by id
 router.get("/api/vehicles/:id", (req,res) => {
-    db.Vehicle.findOne({
+    db.Vehicle.findAll({
         where : {
             id : req.params.id
         }

@@ -27,9 +27,9 @@ router.get("/api/mover/:id", (req, res) => {
 router.get("/api/moverorders/:id", (req,res) => {
     db.Mover.findAll({
         where: {
-         id: req.params.id,
-         include: [db.Order]
-        }
+         id: req.params.id
+        },
+        include: [db.Order]
     }).then(dbOrders => {
         res.json(dbOrders);
     });
@@ -37,24 +37,24 @@ router.get("/api/moverorders/:id", (req,res) => {
 
 
 //get mover by id and accepted orders
-router.get("/api/moverordes/accepted/:id", (req, res)=> {
+router.get("/api/moverorders/accepted/:id", (req, res)=> {
     db.Mover.findAll({
         where :{
-            id:re.params.id,
-            include: [{model: db.Order, where : {orderstatus: "accepted"}}]
-        }
+            id:req.params.id
+        },
+        include: [{model: db.Order, where : {orderstatus: "accepted"}}]
     }).then(dbOrders => {
         res.json(dbOrders);
     });
 });
 
 //get mover by id and completed orders
-router.get("/api/moverordes/completed/:id", (req, res)=> {
+router.get("/api/moverorders/completed/:id", (req, res)=> {
     db.Mover.findAll({
         where :{
-            id:re.params.id,
-            include: [{model: db.Order, where : {orderstatus: "completed"}}]
-        }
+            id:req.params.id
+        },
+        include: [{model: db.Order, where : {orderstatus: "completed"}}]
     }).then(dbOrders => {
         res.json(dbOrders);
     });
@@ -65,7 +65,7 @@ router.get("/api/movervehicle/:id", (req,res) => {
     db.Mover.findAll({
         include : [db.Vehicle]
     }).then(dbMoverVehicle => {
-        req.json(dbMoverVehicle);
+        res.json(dbMoverVehicle);
     })
 })
 
