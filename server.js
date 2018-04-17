@@ -26,6 +26,17 @@ app.use(bodyParser.json());
 
 // Routes
 // =============================================================
+const userApiRoutes = require("./routes/user-api-routes.js");
+const moverApiRoutes = require("./routes/mover-api-routes.js");
+const customerApiRoutes = require("./routes/customer-api-routes.js");
+const orderApiRoutes = require("./routes/order-api-routes.js");
+const vehicleApiRoutes = require("./routes/vehicle-api-routes.js");
+
+app.use(userApiRoutes);
+app.use(moverApiRoutes);
+app.use(customerApiRoutes);
+app.use(vehicleApiRoutes);
+app.use(orderApiRoutes);
 
 //load passport strategies
 require('./config/passport/passport.js')(passport, db.user); 
