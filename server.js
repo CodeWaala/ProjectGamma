@@ -38,6 +38,9 @@ app.use(customerApiRoutes);
 app.use(vehicleApiRoutes);
 app.use(orderApiRoutes);
 
+//load passport strategies
+require('./config/passport/passport.js')(passport, db.user); 
+
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
 db.sequelize.sync({force:true}).then(function() {
