@@ -27,45 +27,45 @@ router.get("/api/customer/:id", (req, res) => {
 router.get("/api/customerorders/:id", (req,res) => {
     db.Customer.findAll({
         where: {
-         id: req.params.id,
-         include: [db.Order]
-        }
+         id: req.params.id
+        },
+        include: [db.Order]
     }).then(dbOrders => {
         res.json(dbOrders);
     });
 });
 
 //get customer by id and pending orders
-router.get("/api/customerordes/pending/:id", (req, res)=> {
+router.get("/api/customerorders/pending/:id", (req, res)=> {
     db.Customer.findAll({
         where :{
-            id:re.params.id,
-            include: [{model: db.Order, where : {orderstatus: "pending"}}]
-        }
+            id:req.params.id
+        },
+        include: [{model: db.Order, where : {orderstatus: "pending"}}]
     }).then(dbOrders => {
         res.json(dbOrders);
     });
 });
 
 //get customer by id and accepted orders
-router.get("/api/customerordes/accepted/:id", (req, res)=> {
+router.get("/api/customerorders/accepted/:id", (req, res)=> {
     db.Customer.findAll({
         where :{
-            id:re.params.id,
-            include: [{model: db.Order, where : {orderstatus: "accepted"}}]
-        }
+            id:req.params.id
+        },
+        include: [{model: db.Order, where : {orderstatus: "accepted"}}]
     }).then(dbOrders => {
         res.json(dbOrders);
     });
 });
 
 //get customer by id and completed orders
-router.get("/api/customerordes/completed/:id", (req, res)=> {
+router.get("/api/customerorders/completed/:id", (req, res)=> {
     db.Customer.findAll({
         where :{
-            id:re.params.id,
-            include: [{model: db.Order, where : {orderstatus: "completed"}}]
-        }
+            id:req.params.id   
+        },
+        include: [{model: db.Order, where : {orderstatus: "completed"}}]
     }).then(dbOrders => {
         res.json(dbOrders);
     });
