@@ -3,12 +3,11 @@ var bCrypt = require('bcrypt-nodejs');
 
 
 
-module.exports = function (passport, user, appointments) {
-
+module.exports = function (passport, user, customer, mover, orders) {
 
     var User = user;
 
-    var Appointments = appointments;
+    var Orders = orders;
 
     var LocalStrategy = require('passport-local').Strategy;
 
@@ -62,7 +61,8 @@ module.exports = function (passport, user, appointments) {
 
                             firstname: req.body.firstname,
 
-                            lastname: req.body.lastname
+                            lastname: req.body.lastname,
+
 
                         };
                     // adds new entries to the database
@@ -116,8 +116,8 @@ module.exports = function (passport, user, appointments) {
 
     });
 
-    //LOCAL SIGNIN
-    passport.use('local-signin', new LocalStrategy(
+    //CUSTOMER SIGNIN
+    passport.use('customer-signin', new LocalStrategy(
 
         {
 
