@@ -54,7 +54,7 @@ export class Home extends Component {
                         <Parallax.Layer
                             offset={1}
                             speed={-0.5}
-                            style={{ backgroundColor: 'blue'}}
+                            style={{ backgroundColor: 'white'}}
                             onClick={() => this.refs.parallax.scrollTo(0)}
                             >
                             Another page ... <Button/>

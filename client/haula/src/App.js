@@ -2,13 +2,10 @@ import React, { Component } from 'react';
 import { MyNavbar } from './Shared/nav/nav2';
 import { LogIn } from './Pages/LogIn/loginpage'
 import { Footer } from './Shared/footer/footer';
-<<<<<<< HEAD
-import { Home } from './Pages/Home/home'
+import { Home } from './Pages/Home/home';
 import { SignUpPage } from './Pages/SignUp/signuppage';
 import { Customer } from './Pages/Customer/customer';
-=======
-import { Home } from './Pages/Home/home';
->>>>>>> 79279566f4d2e68958508cf579bfdc81365661f0
+import { Mover } from './Pages/Mover/mover';
 
 class App extends Component {
   render() {
@@ -18,7 +15,8 @@ class App extends Component {
       {/* <Home/> */}
       {/* <LogIn/> */}
       {/* <SignUpPage/> */}
-      <Customer/>
+      {/* <Customer/> */}
+      <Mover/>
       <Footer/>
         {/* <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
