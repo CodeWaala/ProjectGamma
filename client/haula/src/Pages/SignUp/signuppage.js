@@ -14,7 +14,7 @@ export class SignUpPage extends Component {
 
                     <div className="form-label-group">
                         <input  type="email"
-                                id="inputEMail" 
+                                id="inputEmail" 
                                 class="form-control" 
                                 placeholder="Email Address"
                                 require=""

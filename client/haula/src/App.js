@@ -4,15 +4,17 @@ import { LogIn } from './Pages/LogIn/loginpage'
 import { Footer } from './Shared/footer/footer';
 import { Home } from './Pages/Home/home'
 import { SignUpPage } from './Pages/SignUp/signuppage';
+import { Customer } from './Pages/Customer/customer';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
       <MyNavbar/>
-      <Home/>
-      <LogIn/>
-      <SignUpPage/>
+      {/* <Home/> */}
+      {/* <LogIn/> */}
+      {/* <SignUpPage/> */}
+      <Customer/>
       <Footer/>
         {/* <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />

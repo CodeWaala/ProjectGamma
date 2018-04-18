@@ -1,18 +1,74 @@
 import React, { Component } from 'react';
 import { MyNavbar } from '../../Shared/nav/nav2';
 import { Footer } from '../../Shared/footer/footer';
-import { Image } from 'react-bootstrap';
+import { Image,Button } from 'react-bootstrap';
 import { Parallax } from 'react-spring'
+import { request } from 'http';
+import './home.css';//
 
-const imgSource = require("./components/images/background1.jpg")
+const imgSource1 = require("./components/images/background1.jpg")
+const imgSource2 = require("./components/images/background2.jpg")
+const styles = {
+    fontFamily: 'Menlo-Regular, Menlo, monospace',
+    fontSize: 14,
+    color: 'white',
+    display: 'flex', alignItems: 'center', justifyContent: 'center',
+}
+
 
 export class Home extends Component {
     render() {
       return (
         <div className="App">
-        <MyNavbar/>
-        <img src="/components/images/background1.jpg" alt="banana"/>
-        <Image src={imgSource} responsive />;
+             <Parallax ref="parallax" pages={1.5}>
+
+                        <Parallax.Layer 
+                            offset={0}
+                            speed={0.2} 
+                            factor={0.01}
+                            style={{ backgroundColor: 'red'}}
+                        />
+                        <Parallax.Layer 
+                            factor={0}
+                            offset={1}
+                            speed={1}
+                            style={{ backgroundColor: 'blue' }}
+                        />
+                        <Parallax.Layer
+                            offset={2}
+                            speed={1}
+                            style={{ backgroundColor: 'green' }}
+                            factor={0.5}
+                        />
+
+                        <Parallax.Layer
+                            factor={0.5}
+                            offset={0}
+                            speed={0.5}
+                            style={styles}
+                            onClick={() => this.refs.parallax.scrollTo(1)}
+                        ><Image src={imgSource1} responsive/>
+                        </Parallax.Layer>
+                        
+
+                        <Parallax.Layer
+                            offset={1}
+                            speed={-0.5}
+                            style={{ backgroundColor: 'blue'}}
+                            onClick={() => this.refs.parallax.scrollTo(0)}
+                            >
+                            Another page ... <Button/>
+                        </Parallax.Layer>
+
+                        {/* <Parallax.Layer
+                            offset={2}
+                            speed={0.5}
+                            style={styles}
+                            onClick={() => this.refs.parallax.scrollTo(0)}>
+                            The end.
+                        </Parallax.Layer> */}
+
+                    </Parallax>
         <Footer/>
           {/* <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
