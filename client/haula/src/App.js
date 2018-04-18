@@ -21,6 +21,10 @@ import Login from './components/Login';
 
 
 
+import { MyNavbar } from './Shared/nav/nav2';
+import { LogIn } from './Pages/LogIn/loginpage'
+import { Footer } from './Shared/footer/footer';
+import { Home } from './Pages/Home/home';
 
 class App extends Component {
   render() {
@@ -39,6 +43,20 @@ class App extends Component {
           </div>
       </Router>
     )
+      <div className="App">
+      <MyNavbar/>
+      <Home/>
+      <LogIn/>
+      <Footer/>
+        {/* <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <h1 className="App-title">Welcome to React</h1>
+        </header>
+        <p className="App-intro">
+          To get started, edit <code>src/App.js</code> and save to reload.
+        </p> */}
+      </div>
+    );
   }
 }
 
