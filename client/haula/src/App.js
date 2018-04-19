@@ -44,7 +44,7 @@ class App extends Component {
                 <Route render= {() => <p>Page Not Found 404</p>} />  
             </Switch>
           </div>
-      
+          </Router>
       <div className="App">
       <MyNavbar/>
       {/* <Home/> */}
@@ -60,9 +60,8 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p> */}
-      {/* </div> */}
+       </div>
       </div>
-      </Router>
     )
   }
 }
