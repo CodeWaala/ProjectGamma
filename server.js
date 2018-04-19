@@ -23,6 +23,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // Static directory
+app.use(express.static("public"));
+
+// Passport
+app.use(session({ secret: 'projectgamma',resave: true, saveUninitialized:true})); // session secret
+app.use(passport.initialize());
+app.use(passport.session()); // persistent login sessions
+
 
 // Routes
 // =============================================================
