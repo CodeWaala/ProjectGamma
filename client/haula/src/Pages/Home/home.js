@@ -20,29 +20,29 @@ export class Home extends Component {
     render() {
       return (
         <div className="App">
-             <Parallax ref="parallax" pages={1.5}>
+             <Parallax ref="parallax" pages={3}>
 
                         <Parallax.Layer 
                             offset={0}
                             speed={0.2} 
-                            factor={0.01}
+                            factor={0}
                             style={{ backgroundColor: 'red'}}
                         />
                         <Parallax.Layer 
                             factor={0}
                             offset={1}
-                            speed={1}
+                            speed={0.2}
                             style={{ backgroundColor: 'blue' }}
                         />
                         <Parallax.Layer
                             offset={2}
-                            speed={1}
+                            speed={0.2}
                             style={{ backgroundColor: 'green' }}
-                            factor={0.5}
+                            factor={0}
                         />
 
                         <Parallax.Layer
-                            factor={0.5}
+                            factor={0.7}
                             offset={0}
                             speed={0.5}
                             style={styles}
@@ -60,13 +60,13 @@ export class Home extends Component {
                             Another page ... <Button/>
                         </Parallax.Layer>
 
-                        {/* <Parallax.Layer
+                        <Parallax.Layer
                             offset={2}
                             speed={0.5}
                             style={styles}
                             onClick={() => this.refs.parallax.scrollTo(0)}>
                             The end.
-                        </Parallax.Layer> */}
+                        </Parallax.Layer>
 
                     </Parallax>
         <Footer/>

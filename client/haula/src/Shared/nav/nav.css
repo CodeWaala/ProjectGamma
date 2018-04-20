@@ -6,3 +6,27 @@
     margin-bottom: 0px;
     width: 100%;
 }
+
+.signButton{
+    color: white;
+    background-color: #00abfa;
+    margin: 0px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.loginButton{
+    color: white;
+    background-color: #00abfa;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.helpButton{
+    color: white;
+    background-color: #00abfa;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+

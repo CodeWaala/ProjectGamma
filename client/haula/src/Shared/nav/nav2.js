@@ -42,17 +42,17 @@ export const MyNavbar = () =>{
   <Navbar.Collapse>
     <Nav pullRight>
       <NavItem eventKey={1} >
-          <NavLink activeClassName='active' to='/SignUp'>
+          <NavLink activeClassName='active' to='/SignUp' className='signButton'>
             Sign up
           </NavLink>
       </NavItem>
       <NavItem eventKey={2} href="#">
-      <NavLink activeClassName='active' to='/Login'>
+      <NavLink activeClassName='active' to='/Login' className='loginButton'>
             Login
           </NavLink>
       </NavItem>
       <NavItem eventKey={3} href="#">
-          <NavLink activeClassName='active' to='/Help'>
+          <NavLink activeClassName='active' to='/Help' className='helpButton'>
             Help
           </NavLink>
       </NavItem>
