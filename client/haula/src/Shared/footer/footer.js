@@ -1,28 +1,81 @@
-import React, { Component } from 'react';
-import './footer.css'
-
+import React, { Component } from "react";
+import "./footer.css";
 
 export class Footer extends Component {
-    render() {
-    return(
-                <footer>
-                    <div>
-                        <div className="container text-center">
-                            <div className="row">
-                                    <div className="col-md-12" id="footerTitle">
-                                        HELLO WORLD THIS IS MY FOOTER
-                                    <a href="#"><i className="fa fa-2x fa-facebook-square"></i></a>
-                                    <a href="#"><i className="fa fa-2x fa-twitter-square"></i></a>
-                                    <a href="#"><i className="fa fa-2x fa-google-plus-square"></i></a>
-                                    <a href="#"><i className="fa fa-2x fa-youtube-square"></i></a>
-                                    <a href="#"><i className="fa fa-2x fa-vimeo-square"></i></a>
-                                    <a href="#"><i className="fa fa-2x fa-pinterest-square"></i></a>
-                                    <a href="#"><i className="fa fa-2x fa-linkedin-square"></i></a>
-                                    </div>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
-            )
-            }
+  render() {
+    return (
+      <footer id="myFooter">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-3">
+              <h2 class="logo">
+                <a href="#"> LOGO </a>
+              </h2>
+            </div>
+            <div class="col-sm-2">
+              <h5>Get started</h5>
+              <ul>
+                <li>
+                  <a href="#">Home</a>
+                </li>
+                <li>
+                  <a href="#">Sign up</a>
+                </li>
+                <li>
+                  <a href="#">Downloads</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-sm-2">
+              <h5>About us</h5>
+              <ul>
+                <li>
+                  <a href="#">Company Information</a>
+                </li>
+                <li>
+                  <a href="#">Contact us</a>
+                </li>
+                <li>
+                  <a href="#">Reviews</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-sm-2">
+              <h5>Support</h5>
+              <ul>
+                <li>
+                  <a href="#">FAQ</a>
+                </li>
+                <li>
+                  <a href="#">Help desk</a>
+                </li>
+                <li>
+                  <a href="#">Forums</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-sm-3">
+              <div class="social-networks">
+                <a href="#" class="twitter">
+                  <i class="fa fa-twitter" />
+                </a>
+                <a href="#" class="facebook">
+                  <i class="fa fa-facebook" />
+                </a>
+                <a href="#" class="google">
+                  <i class="fa fa-google-plus" />
+                </a>
+              </div>
+              <button type="button" class="btn btn-default">
+                Contact us
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <p>© 2018 Copyright Text </p>
+        </div>
+      </footer>
+    );
+  }
 }
