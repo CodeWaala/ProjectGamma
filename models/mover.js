@@ -30,19 +30,19 @@ module.exports = (sequelize, DataTypes) => {
       phonenum: {
         type: DataTypes.STRING(10)
       },
-      createdAt: {
-        type: DataTypes.DATE(3),
-        defaultValue: sequelize.literal("CURRENT_TIMESTAMP(3)")
-      },
-      updatedAt: {
-        type: DataTypes.DATE(3),
-        defaultValue: sequelize.literal(
-          "CURRENT_TIMESTAMP(3) ON UPDATE CURRENT_TIMESTAMP(3)"
-        )
-      }
+    //   createdAt: {
+    //     type: DataTypes.DATE(3),
+    //     defaultValue: sequelize.literal("CURRENT_TIMESTAMP(3)")
+    //   },
+    //   updatedAt: {
+    //     type: DataTypes.DATE(3),
+    //     defaultValue: sequelize.literal(
+    //       "CURRENT_TIMESTAMP(3) ON UPDATE CURRENT_TIMESTAMP(3)"
+    //     )
+    //   }
     },
     {
-      timestamps: true
+      timestamps: false
     }
   );
 
@@ -50,6 +50,7 @@ module.exports = (sequelize, DataTypes) => {
     Mover.belongsTo(models.User);
     Mover.hasOne(models.Vehicle);
     Mover.belongsToMany(models.Order, {through: "MoverOrders" });
+    //Mover.hasMany(models.Order);
   };
 
   return Mover;
