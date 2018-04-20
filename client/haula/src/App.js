@@ -23,11 +23,11 @@ import Login from './components/Login/Login';
 import { MyNavbar } from './Shared/nav/nav2';
 import { LogIn } from './Pages/LogIn/loginpage'
 import { Footer } from './Shared/footer/footer';
-import Home from './Pages/Home';
 import { SignUpPage } from './Pages/SignUp/signuppage';
 import { Customer } from './Pages/Customer/customer';
 import { Home } from './Pages/Home/home';
 import { Mover } from './Pages/Mover/mover';
+import { Help } from './Pages/Help/help';
 
 class App extends Component {
   render() {
@@ -35,15 +35,17 @@ class App extends Component {
       <div>
       <Router>
           <div>
+          <MyNavbar/>
             <Switch>
                 <Route exact path='/' component={Home} />
                 <Route exact path='/SignUp' component={SignUp} /> 
                 <Route exact path='/Login' component={Login} />
                 <Route exact path='/Customer' component={Customer} />
                 <Route exact path='/Mover' component={Mover} />
+                <Route exact path='/Help' component={Help} />
                 <Route render= {() => <p>Page Not Found 404</p>} />  
             </Switch>
-            <MyNavbar/>
+            <Footer/>
           </div>
           </Router>
       <div className="App">
