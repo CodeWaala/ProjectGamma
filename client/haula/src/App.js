@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
 // import AppBarExampleIcon from './components/nav';
-<<<<<<< HEAD
-=======
-// import './App.css';
->>>>>>> ff725e7de1e3c47e707faabc43b1f904c7f4fdfc
 import {
   BrowserRouter as Router,
   Route,
@@ -15,19 +11,12 @@ import {
 // const Router = ReactRouter.BrowserRouter;
 // const Route = ReactRouter.Route;
 // const Switch = ReactRouter.Switch;
-<<<<<<< HEAD
 // import Home from './components/Home';
 // import Customer from './components/Customer';
 // import Mover from './components/Mover';
 import SignUp from './components/SignUp/SignUp';
 import Nav from './components/nav/nav';
 import Login from './components/Login/Login';
-=======
-import Customer from './components/Customer';
-import SignUp from './components/SignUp';
-import nav from './components/nav';
-import Login from './components/Login';
->>>>>>> ff725e7de1e3c47e707faabc43b1f904c7f4fdfc
 
 
 
@@ -75,11 +64,6 @@ class App extends Component {
         </p> */}
        </div>
       </div>
-<<<<<<< HEAD
-=======
-      </div>
-      </Router>
->>>>>>> ff725e7de1e3c47e707faabc43b1f904c7f4fdfc
     )
   }
 }
