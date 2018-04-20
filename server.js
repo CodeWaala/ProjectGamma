@@ -22,15 +22,15 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // parse application/json
 app.use(bodyParser.json());
 
-// Static directory
-// app.use(express.static("public"));
+Static directory
+app.use(express.static("public"));
 
-// // Passport
+// Passport
 
-// app.use(session({ secret: 'projectgamma',resave: true, saveUninitialized:true})); // session secret
+app.use(session({ secret: 'projectgamma',resave: true, saveUninitialized:true})); // session secret
 
-// app.use(passport.initialize());
-// app.use(passport.session()); // persistent login sessions
+app.use(passport.initialize());
+app.use(passport.session()); // persistent login sessions
 
 // Routes
 // =============================================================
