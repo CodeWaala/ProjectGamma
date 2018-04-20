@@ -112,7 +112,7 @@ UserInput.defaultProps = {
   label: 'Username',
 }
 
-export class Login extends React.Component {
+class Login extends React.Component {
   constructor(props) {
     super(props);
 
