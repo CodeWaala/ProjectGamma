@@ -22,14 +22,15 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // parse application/json
 app.use(bodyParser.json());
 
-// Static directory
+Static directory
 app.use(express.static("public"));
 
 // Passport
+
 app.use(session({ secret: 'projectgamma',resave: true, saveUninitialized:true})); // session secret
+
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
-
 
 // Routes
 // =============================================================
@@ -45,8 +46,8 @@ app.use(customerApiRoutes);
 app.use(vehicleApiRoutes);
 app.use(orderApiRoutes);
 
-//load passport strategies
-require('./config/passport/passport.js')(passport, db.user); 
+// //load passport strategies
+// require('./config/passport/passport.js')(passport, db.user); 
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================

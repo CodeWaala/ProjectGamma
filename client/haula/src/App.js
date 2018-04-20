@@ -26,6 +26,7 @@ import { Footer } from './Shared/footer/footer';
 import Home from './Pages/Home';
 import { SignUpPage } from './Pages/SignUp/signuppage';
 import { Customer } from './Pages/Customer/customer';
+import { Home } from './Pages/Home/home';
 import { Mover } from './Pages/Mover/mover';
 
 class App extends Component {
@@ -46,6 +47,7 @@ class App extends Component {
           </div>
           </Router>
       <div className="App">
+<<<<<<< HEAD
       {/* <Home/> */}
       {/* <LogIn/> */}
       {/* <SignUpPage/> */}
@@ -53,6 +55,14 @@ class App extends Component {
       {/* <Mover/>
       <Footer/> */}
          {/* <header className="App-header">
+=======
+      <MyNavbar/>
+      <Home/>
+      <LogIn/>
+      <Mover/>
+      <Footer/>
+        {/* <header className="App-header">
+>>>>>>> 4da1d328f7bf607f8d8ff143d7c09a179937b664
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
