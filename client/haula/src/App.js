@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // import AppBarExampleIcon from './components/nav';
-import './App.css';
+// import './App.css';
 import {
   BrowserRouter as Router,
   Route,
@@ -12,11 +12,9 @@ import {
 // const Router = ReactRouter.BrowserRouter;
 // const Route = ReactRouter.Route;
 // const Switch = ReactRouter.Switch;
-import Home from './components/Home';
 import Customer from './components/Customer';
-import Mover from './components/Mover';
 import SignUp from './components/SignUp';
-import Nav from './components/Nav';
+import nav from './components/nav';
 import Login from './components/Login';
 
 
@@ -31,8 +29,9 @@ class App extends Component {
   render() {
     return (
       <Router>
+        <div>
           <div className='container'>
-            <Nav />
+            <nav />
             <Switch>
                 <Route exact path='/' component={Home} />
                 <Route exact path='/SignUp' component={SignUp} /> 
@@ -56,6 +55,7 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p> */}
+      </div>
       </div>
       </Router>
     )
