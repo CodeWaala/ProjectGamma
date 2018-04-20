@@ -41,7 +41,6 @@ export class Mover extends Component {
   render() {
     return (
       <div className="flex-box">
-<<<<<<< HEAD
         <div className="flex-1">
         
                   <Thumbnail src="/thumbnaildiv.png" alt="242x200">
@@ -80,7 +79,6 @@ export class Mover extends Component {
           mapElement={<div style={{ height: `100%` }} />}
         />
        </div> 
-=======
         {console.log(this.state.orders)}
           <MoveCardContainer>
           {
@@ -101,7 +99,6 @@ export class Mover extends Component {
             mapElement={<div style={{ height: `100%` }} />}
           />
         </div>
->>>>>>> 4da1d328f7bf607f8d8ff143d7c09a179937b664
       </div>
     );
   }
