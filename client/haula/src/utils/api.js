@@ -1,12 +1,13 @@
-const axios = require('axios');
+import axios from "axios";
 
-module.exports = {
-	fetchPopularRepos: function (language) {
-		const encodedURI = window.encodeURI(`https://api.github.com/search/repositories?q=stars:>1+language:${language}&sort=stars&order=desc&type=Repositories`);
-	
-	return axios.get(encodedURI)
-		.then(function(res) {
-			return res.data.items;
-		});
-	}
-}
+export default {
+  // Gets all orders
+  getOrders: function() {
+    return axios.get("/api/orders");
+  },
+
+  getOrdersPending : function() {
+      return axios.get("/api/orders/pending");
+  }
+ 
+};
