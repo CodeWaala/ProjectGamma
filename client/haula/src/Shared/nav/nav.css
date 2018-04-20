@@ -1,6 +1,8 @@
 .navbar-default{
-    background-color: black;
+    background-color: white;
+    width: 100%;
 }
 .navbar{
     margin-bottom: 0px;
+    width: 100%;
 }

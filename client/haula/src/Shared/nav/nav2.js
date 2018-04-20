@@ -1,5 +1,6 @@
 import React from "react";
 import { Navbar, Nav, NavItem, MenuItem, NavDropdown} from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
 import './nav.css';//
 
 // export const Nav = () => (
@@ -32,17 +33,28 @@ export const MyNavbar = () =>{
 <Navbar collapseOnSelect>
   <Navbar.Header>
     <Navbar.Brand>
-      <a href="#brand">Haula</a>
+          <NavLink exact activeClassName='active' to='/'>
+              Haula
+          </NavLink>
     </Navbar.Brand>
     <Navbar.Toggle />
   </Navbar.Header>
   <Navbar.Collapse>
     <Nav pullRight>
-      <NavItem eventKey={1} href="#">
-        Sign Up
+      <NavItem eventKey={1} >
+          <NavLink activeClassName='active' to='/SignUp'>
+            Sign up
+          </NavLink>
       </NavItem>
       <NavItem eventKey={2} href="#">
-        Log In
+      <NavLink activeClassName='active' to='/Login'>
+            Login
+          </NavLink>
+      </NavItem>
+      <NavItem eventKey={3} href="#">
+          <NavLink activeClassName='active' to='/Help'>
+            Help
+          </NavLink>
       </NavItem>
     </Nav>
   </Navbar.Collapse>

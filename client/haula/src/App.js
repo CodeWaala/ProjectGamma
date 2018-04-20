@@ -33,8 +33,7 @@ class App extends Component {
     return (
       <div>
       <Router>
-          <div className='container'>
-            <Nav/>
+          <div>
             <Switch>
                 <Route exact path='/' component={Home} />
                 <Route exact path='/SignUp' component={SignUp} /> 
@@ -43,10 +42,10 @@ class App extends Component {
                 <Route exact path='/Mover' component={Mover} />
                 <Route render= {() => <p>Page Not Found 404</p>} />  
             </Switch>
+            <MyNavbar/>
           </div>
           </Router>
       <div className="App">
-      <MyNavbar/>
       {/* <Home/> */}
       {/* <LogIn/> */}
       {/* <SignUpPage/> */}
