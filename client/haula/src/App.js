@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // import AppBarExampleIcon from './components/nav';
-import './App.css';
+// import './App.css';
 import {
   BrowserRouter as Router,
   Route,
@@ -12,9 +12,9 @@ import {
 // const Router = ReactRouter.BrowserRouter;
 // const Route = ReactRouter.Route;
 // const Switch = ReactRouter.Switch;
-import Home from './components/Home';
+// import Home from './components/Home';
 import Customer from './components/Customer';
-import Mover from './components/Mover';
+// import Mover from './components/Mover';
 import SignUp from './components/SignUp';
 import Nav from './components/Nav';
 import Login from './components/Login';
