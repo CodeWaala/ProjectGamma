@@ -146,3 +146,10 @@ a {
 .reset:hover {
 	cursor: pointer;
 }
+
+.form-control{
+	display: flex;
+	width: 50%;
+	justify-content: center;
+	align-content: center;
+}
