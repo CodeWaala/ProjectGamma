@@ -6,8 +6,8 @@ import { Parallax } from 'react-spring'
 import { request } from 'http';
 import './home.css';//
 
-const imgSource1 = require("./components/images/background1.jpg")
-const imgSource2 = require("./components/images/background2.jpg")
+// const imgSource1 = require("./components/images/background1.jpg")
+// const imgSource2 = require("./components/images/background2.jpg")
 const styles = {
     fontFamily: 'Menlo-Regular, Menlo, monospace',
     fontSize: 14,
@@ -20,7 +20,12 @@ export class Home extends Component {
     render() {
       return (
         <div className="App">
-             <Parallax ref="parallax" pages={3}>
+                <div className='parallax'>
+                </div>
+                <div style={{height: "500px", backgroundColor: "white"}} ></div>
+                <div className='parallax'>
+                </div>
+             {/* <Parallax ref="parallax" pages={3}>
 
                         <Parallax.Layer 
                             offset={0}
@@ -68,7 +73,7 @@ export class Home extends Component {
                             The end.
                         </Parallax.Layer>
 
-                    </Parallax>
+                    </Parallax> */}
           {/* <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
             <h1 className="App-title">Welcome to React</h1>
