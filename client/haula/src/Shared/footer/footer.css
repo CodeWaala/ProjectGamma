@@ -1,11 +1,29 @@
 #Footer {
-  background-color: #3c3d41;
+  background-color: white;
   color: white;
   padding-top: 30px;
-  position: fixed;
+  position: relative;
   left: 0;
   bottom: 0;
   width: 100%;
+}
+
+.logoFooter {
+  height:80px;
+}
+
+.btn {
+  background-color: rgb(0,171,250) !important;
+}
+
+.mainMenu>li>a, .firstMenu>li>a, .secondMenu>li>a {
+  color: rgb(0, 171, 250) !important;
+  padding-bottom: 105px !important;
+}
+
+.mainMenu>li>a:Hover, .firstMenu>li>a:Hover, .secondMenu>li>a:Hover {
+  color: gray !important;
+  padding-bottom: 105px !important;
 }
 
 #Footer .footer-copyright {
@@ -13,6 +31,9 @@
   padding-top: 3px;
   padding-bottom: 3px;
   text-align: center;
+}
+.getStarted {
+  margin-right: 20px !important;
 }
 
 #Footer .row {
@@ -26,7 +47,7 @@
 
 #Footer .footer-copyright p {
   margin: 10px;
-  color: #ccc;
+  color: black;
 }
 
 #Footer ul {
@@ -40,6 +61,7 @@
   color: white;
   font-weight: bold;
   margin-top: 30px;
+  color:gray;
 }
 
 #Footer h2 a {
@@ -90,7 +112,7 @@
 
 #Footer .btn {
   color: white;
-  background-color: #d84b6b;
+  background-color: rgb(0,171,250);
   border-radius: 20px;
   border: none;
   width: 150px;
@@ -103,6 +125,9 @@
 @media screen and (max-width: 767px) {
   #myFooter {
     text-align: center;
+  }
+  .container {
+    margin-left: 15%;
   }
 }
 
@@ -130,4 +155,12 @@ body {
 #Footer {
   flex: 0 0 auto;
   -webkit-flex: 0 0 auto;
+}
+
+.footer-copyright {
+  background-color: rgb(0, 171, 250) !important;
+}
+
+.container {
+  margin-left: 15%;
 }
