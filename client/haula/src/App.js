@@ -45,24 +45,9 @@ class App extends Component {
                 <Route exact path='/Help' component={Help} />
                 <Route render= {() => <p>Page Not Found 404</p>} />  
             </Switch>
-            <Footer/>
           </div>
           </Router>
-      <div className="App">
-      {/* <Home/> */}
-      {/* <LogIn/> */}
-      {/* <SignUpPage/> */}
-      {/* <Customer/> */}
-      {/* <Mover/>
-      <Footer/> */}
-         {/* <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p> */}
-       </div>
+          <Footer/>
       </div>
     )
   }
