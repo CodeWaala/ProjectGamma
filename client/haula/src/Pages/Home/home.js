@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 import { MyNavbar } from '../../Shared/nav/nav2';
 import { Footer } from '../../Shared/footer/footer';
-import { Image,Button } from 'react-bootstrap';
+import { Image,Button, Grid, Row, Col } from 'react-bootstrap';
 import { Parallax } from 'react-spring'
 import { request } from 'http';
 import './home.css';//
 import background1 from '../../Shared/main_images/main_box1-02.jpg';
 
+
 <img src={background1}/>;
+
+const personHolder = require('./components/images/person-icon.png')
 // const imgSource1 = require("./components/images/background1.jpg")
 // const imgSource2 = require("./components/images/background2.jpg")
 const styles = {
@@ -24,7 +27,23 @@ export class Home extends Component {
         <div className="App">
                 <div className='parallax img1'>
                 </div>
-                <div style={{height: "100px", backgroundColor: "black"}} ></div>
+                <div style={{height: "500px", backgroundColor: "black",display: 'flex', justifyContent: 'center', alignItems: 'center'}} >
+                    <div class="row-container">
+                    <Grid>
+                        <Row>
+                            <Col>
+                            <Image className="personIcon" src={personHolder} circle responsive />
+                            </Col>
+                            <Col>
+                            <Image className="personIcon" src={personHolder} circle responsive />
+                            </Col>
+                            <Col>
+                            <Image className="personIcon" src={personHolder} circle responsive />
+                            </Col>
+                        </Row>
+                        </Grid>;
+                    </div>
+                </div>
                 <div className='parallax'>
                 </div>
              {/* <Parallax ref="parallax" pages={3}>
