@@ -10,7 +10,7 @@ class SignUp extends React.Component {
 			<h1>This is your Sign Up!</h1>
 
 			<body data-gr-c-s-loaded="true">
-			<form class="form-signin">
+			<form class="form-signin" id="signup" name="signup" method="post" action="/signup">
 				{/* <div>
 					<img class="mb-4" src="" alt=""/>
 					<h1 class="h3 mb-3 font-weight-normal">Floating Labels</h1>
@@ -24,6 +24,19 @@ class SignUp extends React.Component {
 							placeholder="First Name"
 							require=""
 							autofocus=""
+							name="firstname"
+					/>
+				</div>
+				</p>
+				<ControlLabel>Last Name</ControlLabel>
+				<p><div className="form-label-group">
+					<input 	type="text"
+							id="inputLastName"
+							class="form-control"
+							placeholder="Last Name"
+							require=""
+							autofocus=""
+							name="lastname"
 					/>
 				</div>
 				</p>
@@ -35,6 +48,8 @@ class SignUp extends React.Component {
 							placeholder="Email Address"
 							require=""
 							autofocus=""
+							name="email"
+							required=""
 					/>
 				</div>
 				<ControlLabel>Password</ControlLabel>
@@ -47,11 +62,14 @@ class SignUp extends React.Component {
 					/>
 				</div>
 
+
 				<div class="checkbox mb-3">
 					<label>
 						<input type="checkbox" value="remember-me"/> Remember me
 					</label>
 				</div>
+
+				<input class="btn" type="submit" value="Sign Up" onclick="validate()" />
 			
 
 				<p class="mt-5 mb-3 text-muted text-center">© 2017-2018</p>
