@@ -8,7 +8,7 @@ import './mover.css'
 //import { Mover } from './Pages/Mover/mover';
 import {MoveCardContainer} from "./movecardcontainer/movecardcontainer.js";
 import MoverCard from "./movecard/movercard";
-import API from "../../utils/API";
+import API from "../../utils/api";
 import orders from "./orders.json";
 
 export class Mover extends Component {
