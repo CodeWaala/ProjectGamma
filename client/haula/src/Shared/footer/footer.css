@@ -1,130 +1,133 @@
 #Footer {
-    background-color: #3c3d41;
-    color: white;
-    padding-top: 30px;
+  background-color: #3c3d41;
+  color: white;
+  padding-top: 30px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
 
 #Footer .footer-copyright {
-    background-color: #333333;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    text-align: center;
+  background-color: #333333;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  text-align: center;
 }
 
 #Footer .row {
-    margin-bottom: 60px;
+  margin-bottom: 60px;
 }
 
 #Footer .navbar-brand {
-    margin-top: 45px;
-    height: 65px;
+  margin-top: 45px;
+  height: 65px;
 }
 
 #Footer .footer-copyright p {
-    margin: 10px;
-    color: #ccc;
+  margin: 10px;
+  color: #ccc;
 }
 
 #Footer ul {
-    list-style-type: none;
-    padding-left: 0;
-    line-height: 1.7;
+  list-style-type: none;
+  padding-left: 0;
+  line-height: 1.7;
 }
 
 #Footer h5 {
-    font-size: 18px;
-    color: white;
-    font-weight: bold;
-    margin-top: 30px;
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+  margin-top: 30px;
 }
 
-#Footer h2 a{
-    font-size: 50px;
-    text-align: center;
-    color: #fff;
+#Footer h2 a {
+  font-size: 50px;
+  text-align: center;
+  color: #fff;
 }
 
 #Footer a {
-    color: #d2d1d1;
-    text-decoration: none;
+  color: #d2d1d1;
+  text-decoration: none;
 }
 
 #Footer a:hover,
 #Footer a:focus {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 
 #Footer .social-networks {
-    text-align: center;
-    padding-top: 30px;
-    padding-bottom: 16px;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 16px;
 }
 
 #Footer .social-networks a {
-    font-size: 32px;
-    color: #f9f9f9;
-    padding: 10px;
-    transition: 0.2s;
+  font-size: 32px;
+  color: #f9f9f9;
+  padding: 10px;
+  transition: 0.2s;
 }
 
 #Footer .social-networks a:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 #Footer .facebook:hover {
-    color: #0077e2;
+  color: #0077e2;
 }
 
 #Footer .google:hover {
-    color: #ef1a1a;
+  color: #ef1a1a;
 }
 
 #Footer .twitter:hover {
-    color: #00aced;
+  color: #00aced;
 }
 
 #Footer .btn {
-    color: white;
-    background-color: #d84b6b;
-    border-radius: 20px;
-    border: none;
-    width: 150px;
-    display: block;
-    margin: 0 auto;
-    margin-top: 10px;
-    line-height: 25px;
+  color: white;
+  background-color: #d84b6b;
+  border-radius: 20px;
+  border: none;
+  width: 150px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+  line-height: 25px;
 }
 
 @media screen and (max-width: 767px) {
-    #myFooter {
-        text-align: center;
-    }
+  #myFooter {
+    text-align: center;
+  }
 }
-
 
 /* CSS used for positioning the footers at the bottom of the page. */
 /* You can remove this. */
 
-html{
-    height: 100%;
+html {
+  height: 100%;
 }
 
-body{
-    display: flex;
-    display: -webkit-flex;
-    flex-direction: column;
-    -webkit-flex-direction: column;
-    height: 100%;
+body {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  height: 100%;
 }
 
-.content{
-   flex: 1 0 auto;
-   -webkit-flex: 1 0 auto;
-   min-height: 200px;
+.content {
+  flex: 1 0 auto;
+  -webkit-flex: 1 0 auto;
+  min-height: 200px;
 }
 
-#Footer{
-   flex: 0 0 auto;
-   -webkit-flex: 0 0 auto;
+#Footer {
+  flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
 }
