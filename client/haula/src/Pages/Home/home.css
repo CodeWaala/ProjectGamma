@@ -8,11 +8,14 @@
         align-items: center;
         justify-content: center;
     } */
+.img1{
+    background-image: url('./components/images/main_images/main_box1-02.jpg');
+    height: 50%;
+}
 
 .parallax { 
         /* The image used */
-        background-image: url("https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg?auto=compress&cs=tinysrgb&h=350");
-    
+        
         /* Set a specific height */
         height: 500px; 
     

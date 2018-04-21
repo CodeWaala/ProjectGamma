@@ -5,6 +5,9 @@
 .navbar{
     margin-bottom: 0px;
     width: 100%;
+    position: relative;
+    margin: 10px;
+    border: none;
 }
 
 .signButton{
@@ -29,4 +32,9 @@
     border-radius: 8px;
 }
 
+.navbar-brand>img{
+    width: 115px;
+    position: absolute;
+    top: -5px;
+}
 

@@ -3560,6 +3560,7 @@ Lockfile:
       fd-slicer "~1.0.1"
 
 Trace: 
+<<<<<<< HEAD
   Error: `install` has been replaced with `add` to add new dependencies. Run "yarn add express-session" instead.
       at MessageError.Error (native)
       at new MessageError (C:\Users\Leeland\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:186:110)
@@ -3567,3 +3568,13 @@ Trace:
       at next (native)
       at step (C:\Users\Leeland\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:98:30)
       at C:\Users\Leeland\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:109:13
+=======
+  Error: Couldn't find package "express-sesion" on the "npm" registry.
+      at new MessageError (C:\Users\bharab8\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:186:110)
+      at NpmResolver.<anonymous> (C:\Users\bharab8\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:51625:15)
+      at Generator.next (<anonymous>)
+      at step (C:\Users\bharab8\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:98:30)
+      at C:\Users\bharab8\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:109:13
+      at <anonymous>
+      at process._tickCallback (internal/process/next_tick.js:188:7)
+>>>>>>> 5b99b854ecd7f2ad6ceaad20f6335d1bf793148c

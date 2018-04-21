@@ -4,8 +4,8 @@ import "./footer.css";
 export class Footer extends Component {
   render() {
     return (
-      <footer id="myFooter">
-        <div class="container">
+      <footer id="Footer">
+        <div class="container flex-1">
           <div class="row">
             <div class="col-sm-3">
               <h2 class="logo">
@@ -72,7 +72,7 @@ export class Footer extends Component {
             </div>
           </div>
         </div>
-        <div class="footer-copyright">
+        <div class="footer-copyright flex-2">
           <p>© 2018 Copyright Text </p>
         </div>
       </footer>

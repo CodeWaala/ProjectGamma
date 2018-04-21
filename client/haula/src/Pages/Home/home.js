@@ -5,7 +5,9 @@ import { Image,Button } from 'react-bootstrap';
 import { Parallax } from 'react-spring'
 import { request } from 'http';
 import './home.css';//
+import background1 from '../../Shared/main_images/main_box1-02.jpg';
 
+<img src={background1}/>;
 // const imgSource1 = require("./components/images/background1.jpg")
 // const imgSource2 = require("./components/images/background2.jpg")
 const styles = {
@@ -20,9 +22,9 @@ export class Home extends Component {
     render() {
       return (
         <div className="App">
-                <div className='parallax'>
+                <div className='parallax img1'>
                 </div>
-                <div style={{height: "500px", backgroundColor: "white"}} ></div>
+                <div style={{height: "100px", backgroundColor: "black"}} ></div>
                 <div className='parallax'>
                 </div>
              {/* <Parallax ref="parallax" pages={3}>
