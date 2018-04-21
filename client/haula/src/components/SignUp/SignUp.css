@@ -153,3 +153,7 @@ a {
 	justify-content: center;
 	align-content: center;
 }
+
+#signup {
+    margin-bottom: 50px !important;
+}
