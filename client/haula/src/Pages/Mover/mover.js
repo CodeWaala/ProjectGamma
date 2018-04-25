@@ -10,6 +10,8 @@ import {MoveCardContainer} from "./movecardcontainer/movecardcontainer.js";
 import MoverCard from "./movecard/movercard";
 import API from "../../utils/api";
 import orders from "./orders.json";
+const google = window.google;
+const navigator = window.navigator;
 
 export class Mover extends Component {
   constructor(props) {
@@ -23,12 +25,16 @@ export class Mover extends Component {
       IconUrl: "images/GRAY-PIN.png",
       IconUrlHover: "images/red-pin.png",
       FurnitureImage: "images/furniture-picture.jpg",
-      moverequests: {}
+      moverequests: [],
+      latlongs: [],
+      lat : null,
+      lng : null
     };
   }
 
     componentDidMount() {
         this.getMovesInfo();
+        this.getlatlng();
     }
 
     getMovesInfo = () => {
@@ -38,14 +44,24 @@ export class Mover extends Component {
          .catch(err => console.log(err));
     }
 
+    getlatlng() {
+      navigator.geolocation.getCurrentPosition(
+        position => {
+          this.setState({ lat: position.coords.latitude, lng: position.coords.longitude});
+          alert(position.coords.latitude);
+        },
+        error => console.log(error)
+      );
+    }
+
   render() {
     return (
       <div className="flex-box">
         <div className="flex-1">
-        {console.log(this.state.orders)}
+        {console.log(this.state.moverequests)}
           <MoveCardContainer>
           {
-            this.state.orders.map((request, i) => (
+            this.state.moverequests.map((request, i) => (
             <MoverCard
               key={request.key}
               price={request.expectedprice}
@@ -56,12 +72,13 @@ export class Mover extends Component {
         </MoveCardContainer>
         </div>
         <div className="flex-2">
-          <MapWithAMarker
-            googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyDW2jclEKZ5j-zWenaspVMvdBekq60o1TQ&libraries=geometry,drawing,places"
-            loadingElement={<div style={{ height: `100%` }} />}
-            containerElement={<div style={{ height: `400px` }} />}
-            mapElement={<div style={{ height: `100%` }} />}
-          />
+        <MapWithAMarker
+              googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyDW2jclEKZ5j-zWenaspVMvdBekq60o1TQ&libraries=geometry,drawing,places"
+              loadingElement={<div style={{ height: `100%` }} />}
+              containerElement={<div style={{ height: `400px` }} />}
+              mapElement={<div style={{ height: `100%` }} />}
+              test="test"
+            /> 
         </div>
       </div>
     );
