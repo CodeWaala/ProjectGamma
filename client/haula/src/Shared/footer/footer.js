@@ -1,13 +1,14 @@
 import React, { Component } from "react";
 import "./footer.css";
 import logoFooter from "../../Pages/Home/components/images/logo_blue.png";
+import {Router, Link} from 'react-router-dom';
 
 export class Footer extends Component {
   render() {
     return (
       <footer id="Footer">
         <div className="container flex-1">
-          <div class="row">
+          <div class="row footergrid">
             <div class="col-sm-3">
               <h2 class="logo">
                 <a href="#"><img src={logoFooter} className="logoFooter" />  </a>
@@ -48,7 +49,7 @@ export class Footer extends Component {
                   <a href="#">FAQ</a>
                 </li>
                 <li>
-                  <a href="#">Help desk</a>
+                  <Link to="/Help">Help</Link>
                 </li>
                 <li>
                   <a href="#">Forums</a>
