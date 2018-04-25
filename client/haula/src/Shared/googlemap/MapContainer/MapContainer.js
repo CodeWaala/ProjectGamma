@@ -7,12 +7,16 @@ import {
   Marker
 } from "react-google-maps";
 
-const MapWithAMarker = withScriptjs(
-  withGoogleMap(props => (
-    <GoogleMap defaultZoom={8} defaultCenter={{ lat: -34.397, lng: 150.644 }}>
-      <Marker position={{ lat: -34.397, lng: 150.644 }} />
+const { compose, withProps, lifecycle } = require("recompose");
+
+const MapWithAMarker = compose(withProps(), withScriptjs,
+withGoogleMap)(props => {
+  console.log('props', props)
+  return (
+    <GoogleMap defaultZoom={8} defaultCenter={{ lat: 32, lng: 117 }}>
+        <Marker position={{lat: 32, lng: 117}} />  
     </GoogleMap>
-  ))
-);
+  )
+})
 
 export default MapWithAMarker;
