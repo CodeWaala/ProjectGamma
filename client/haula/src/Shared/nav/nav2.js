@@ -2,7 +2,9 @@ import React from "react";
 import { Navbar, Nav, NavItem, MenuItem, NavDropdown} from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import './nav.css';//
+import navlogo from '../main_images/logo_blue.png';
 
+<img src={navlogo}/>
 // export const Nav = () => (
 //   <nav className="navbar navbar-inverse navbar-top">
 //     <div className="container-fluid">
@@ -34,7 +36,7 @@ export const MyNavbar = () =>{
   <Navbar.Header>
     <Navbar.Brand>
           <NavLink exact activeClassName='active' to='/'>
-              Haula
+            <img className="navlogo" src={navlogo}/>
           </NavLink>
     </Navbar.Brand>
     <Navbar.Toggle />

@@ -1,20 +1,21 @@
 import React, { Component } from "react";
 import "./footer.css";
+import logoFooter from "../../Pages/Home/components/images/logo_blue.png";
 
 export class Footer extends Component {
   render() {
     return (
       <footer id="Footer">
-        <div class="container flex-1">
+        <div className="container flex-1">
           <div class="row">
             <div class="col-sm-3">
               <h2 class="logo">
-                <a href="#"> LOGO </a>
+                <a href="#"><img src={logoFooter} className="logoFooter" />  </a>
               </h2>
             </div>
-            <div class="col-sm-2">
+            <div className="col-sm-2 getStarted">
               <h5>Get started</h5>
-              <ul>
+              <ul className="mainMenu">
                 <li>
                   <a href="#">Home</a>
                 </li>
@@ -26,9 +27,9 @@ export class Footer extends Component {
                 </li>
               </ul>
             </div>
-            <div class="col-sm-2">
+            <div className="col-sm-2 getStarted">
               <h5>About us</h5>
-              <ul>
+              <ul className="firstMenu">
                 <li>
                   <a href="#">Company Information</a>
                 </li>
@@ -40,9 +41,9 @@ export class Footer extends Component {
                 </li>
               </ul>
             </div>
-            <div class="col-sm-2">
+            <div className="col-sm-2">
               <h5>Support</h5>
-              <ul>
+              <ul className="secondMenu">
                 <li>
                   <a href="#">FAQ</a>
                 </li>
@@ -54,7 +55,7 @@ export class Footer extends Component {
                 </li>
               </ul>
             </div>
-            <div class="col-sm-3">
+            <div className="col-sm-3 socialNetworks">
               <div class="social-networks">
                 <a href="#" class="twitter">
                   <i class="fa fa-twitter" />
@@ -66,13 +67,13 @@ export class Footer extends Component {
                   <i class="fa fa-google-plus" />
                 </a>
               </div>
-              <button type="button" class="btn btn-default">
+              <button type="button" className="btn">
                 Contact us
               </button>
             </div>
           </div>
         </div>
-        <div class="footer-copyright flex-2">
+        <div className="footer-copyright flex-2">
           <p>© 2018 Copyright Text </p>
         </div>
       </footer>
