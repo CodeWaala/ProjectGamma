@@ -8,7 +8,7 @@ import './mover.css'
 //import { Mover } from './Pages/Mover/mover';
 import {MoveCardContainer} from "./movecardcontainer/movecardcontainer.js";
 import MoverCard from "./movecard/movercard";
-import API from "../../utils/api";
+import API from "../../utils/apihelpers";
 import orders from "./orders.json";
 const google = window.google;
 const navigator = window.navigator;
