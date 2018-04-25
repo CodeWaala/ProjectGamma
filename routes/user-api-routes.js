@@ -51,7 +51,7 @@ module.exports = function (passport) {
         })
     });
 
-    app.post('/signup', passport.authenticate('local-signup', {
+    router.post('/signup', passport.authenticate('local-signup', {
             successRedirect: '/dashboard',
 
             failureRedirect: '/signup'
@@ -60,13 +60,13 @@ module.exports = function (passport) {
 
     ));
 
-    //app.get('/dashboard', isLoggedIn, userController.dashboard);
+    //router.get('/dashboard', isLoggedIn, userController.dashboard);
 
 
 
-    app.get('/logout', userController.logout);
+    router.get('api/logout', userController.logout);
 
-    app.post('/signin', passport.authenticate('local-signin', {
+    router.post('api/signin', passport.authenticate('local-signin', {
             successRedirect: '/dashboard',
 
             failureRedirect: '/signin'

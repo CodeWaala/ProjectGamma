@@ -35,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
     profile: {
       type: DataTypes.ENUM("Mover", "Customer", "Admin"),
       defaultValue: "Customer",
-      allowNull: false
+      //allowNull: false
     },
     // createdAt: {
     //     type: DataTypes.DATE(3),

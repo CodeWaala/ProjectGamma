@@ -1,21 +1,33 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
+import API from "../../utils/api";
 
 export class SignUpPage extends Component {
+
+    componentDidMount() {
+        this.getMovesInfo();
+    }
+
+    getMovesInfo = () => {
+        //api call to get data from DB (moves or order information)
+        API.signup()
+         .then(res => this.setState())
+         .catch(err => console.log(err));
+    }
 
     render() {
         return (
             <body data-gr-c-s-loaded="true">
-                    <form id="signup" name="signup" method="post" action="/signup">
-        <label for="email">Email Address</label>
-        <input class="text" name="email" type="email" required/>
-        <label for="firstname">Firstname</label>
-        <input name="firstname" type="text" />
-        <label for="lastname">Lastname</label>
-        <input name="lastname" type="text" />
-        <label for="password">Password</label>
-        <input name="password" type="password" required/>
-        <input class="btn" type="submit" value="Sign Up" onclick="validate()" />
-    </form>
+                <form id="signup" name="signup" method="post" action="/api/signup">
+                    <label for="email">Email Address</label>
+                    <input class="text" name="email" type="email" required/>
+                    <label for="firstname">Firstname</label>
+                    <input name="firstname" type="text" />
+                    <label for="lastname">Lastname</label>
+                    <input name="lastname" type="text" />
+                    <label for="password">Password</label>
+                    <input name="password" type="password" required/>
+                    <input class="btn" type="submit" value="Sign Up" onclick="validate()" />
+                </form>
     </body>
 
 
