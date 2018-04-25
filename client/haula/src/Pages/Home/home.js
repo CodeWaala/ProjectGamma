@@ -22,7 +22,7 @@ export class Home extends Component {
         <div className="App">
                 <div className='parallax img1'>
                 </div>
-                <div style={{height: "500px", backgroundColor: "black",display: 'flex', justifyContent: 'center', alignItems: 'center'}} >
+                <div style={{height: "500px", backgroundColor: "white",display: 'flex', justifyContent: 'center', alignItems: 'center'}} >
                     <div class="row-container">
                     <Grid>
                         <Row>
