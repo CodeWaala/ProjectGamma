@@ -1,14 +1,35 @@
 import React, { Component } from 'react';
-import {Image} from 'react-bootstrap';
+import { Grid, Row, Col, Image} from 'react-bootstrap';
+import './help.css'
 
-const { helpImage } = require('../../Pages/Home/components/images/background1.jpg')
+const personHolder = require('../Home/components/images/person-icon.png')
+
 
 export class Help extends Component {
     render() {
       return (
         <div>
-        <h1>This is your HELP PAGE</h1>
-        <img src={helpImage}/>
+        <Grid>
+                        <Row className="container">
+                            <Col>
+                            <Image className="personIcon" src={personHolder} circle responsive />
+                            <h4 className="person1">Abhi</h4>
+                            </Col>
+                            <Col>
+                            <Image className="personIcon" src={personHolder} circle responsive />
+                            <h4 className="person2">Leeland</h4>
+                            </Col>
+                            <Col>
+                            <Image className="personIcon" src={personHolder} circle responsive />
+                            <h4 className="person3">Aid</h4>
+                            </Col>
+                            <Col>
+                            <Image className="personIcon" src={personHolder} circle responsive />
+                            <h4 className="person4">Will</h4>
+                            </Col>
+                        </Row>
+                        </Grid>;
+
         </div>
       )
     }

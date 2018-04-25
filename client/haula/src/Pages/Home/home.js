@@ -1,24 +1,20 @@
 import React, { Component } from 'react';
-import { MyNavbar } from '../../Shared/nav/nav2';
-import { Footer } from '../../Shared/footer/footer';
-import { Image,Button, Grid, Row, Col } from 'react-bootstrap';
-import { Parallax } from 'react-spring'
-import { request } from 'http';
+import { Image, Grid, Row, Col } from 'react-bootstrap';
 import './home.css';//
 import bg1 from '../../Shared/main_images/main_bg.jpg';
 import boxes from '../../Shared/main_images/main_boxes.png';
 
 
+<img src={background1} alt=""/>
 
-const personHolder = require('./components/images/person-icon.png');
-//const imgSource1 = require('./components/images/background1.jpg');
-// const imgSource2 = require("./components/images/background2.jpg")
-const styles = {
-    fontFamily: 'Menlo-Regular, Menlo, monospace',
-    fontSize: 14,
-    color: 'white',
-    display: 'flex', alignItems: 'center', justifyContent: 'center',
-}
+const personHolder = require('./components/images/person-icon.png')
+
+// const styles = {
+//     fontFamily: 'Menlo-Regular, Menlo, monospace',
+//     fontSize: 14,
+//     color: 'white',
+//     display: 'flex', alignItems: 'center', justifyContent: 'center',
+// }
 
 
 export class Home extends Component {
@@ -33,8 +29,8 @@ export class Home extends Component {
                     <Button className="mover-btn">Mover</Button>
 
                 </div>
-                
-                <div className='second' style={{height: "500px", backgroundColor: "black", display: 'flex', justifyContent: 'center', alignItems: 'center'}} >
+
+                <div style={{height: "500px", backgroundColor: "white",display: 'flex', justifyContent: 'center', alignItems: 'center'}} >
                     <div class="row-container">
                     <Grid>
                         <Row>
