@@ -8,8 +8,9 @@
   width: 100%;
 }
 .footergrid{
-  height: 300px;
+  height: 100px;
 }
+
 .logoFooter {
   height:80px;
 }
@@ -20,12 +21,12 @@
 
 .mainMenu>li>a, .firstMenu>li>a, .secondMenu>li>a {
   color: rgb(0, 171, 250) !important;
-  padding-bottom: 105px !important;
+  padding-bottom: 10px !important;
 }
 
 .mainMenu>li>a:Hover, .firstMenu>li>a:Hover, .secondMenu>li>a:Hover {
   color: gray !important;
-  padding-bottom: 105px !important;
+  padding-bottom: 10px !important;
 }
 
 #Footer .footer-copyright {
