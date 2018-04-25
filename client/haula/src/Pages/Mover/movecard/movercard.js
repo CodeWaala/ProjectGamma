@@ -1,5 +1,5 @@
 import React from "react";
-import { Image, Grid, Row, Col,Thumbnail, Button, Glyphicon } from "react-bootstrap";
+import { Thumbnail, Button, Glyphicon } from "react-bootstrap";
 
 export const MoverCard = props => (
   <div>

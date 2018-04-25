@@ -1,10 +1,8 @@
 import React, { Component } from "react";
 import {
   Modal,
-  ModalHeader,
-  ModalFooter,
-  Tabs,
-  Tab,
+  // Tabs,
+  // Tab,
   Table,
   Button
 } from "react-bootstrap";

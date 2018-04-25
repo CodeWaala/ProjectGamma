@@ -1,34 +1,10 @@
 import React from "react";
-import { Navbar, Nav, NavItem, MenuItem, NavDropdown} from 'react-bootstrap';
+import { Navbar, Nav, NavItem,} from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import './nav.css';//
 import navlogo from '../main_images/logo_blue.png';
 
 <img src={navlogo}/>
-// export const Nav = () => (
-//   <nav className="navbar navbar-inverse navbar-top">
-//     <div className="container-fluid">
-//       <div className="navbar-header">
-//         <button type="button" className="collapsed navbar-toggle">
-//           <span className="sr-only">Toggle navigation</span>
-//           <span className="icon-bar" /> <span className="icon-bar" />
-//           <span className="icon-bar" />
-//         </button>
-//         <div className="row box-1">
-//         <a href="/" className="navbar-brand">
-//           Haula
-//         </a>
-//         <a href="/link" className="navbar-brand">
-//         Customer
-//         </a>
-//         <a href="/mover" className="navbar-brand">
-//         Mover
-//         </a>
-//         </div> 
-//       </div>
-//     </div>
-//   </nav>
-// );
 
 export const MyNavbar = () =>{
     return(

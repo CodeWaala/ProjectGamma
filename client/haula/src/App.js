@@ -3,9 +3,8 @@ import React, { Component } from 'react';
 import {
   BrowserRouter as Router,
   Route,
-  Link,
   Switch,
-  Redirect
+  // Redirect
 } from 'react-router-dom'
 // const Router = ReactRouter.BrowserRouter;
 // const Route = ReactRouter.Route;
@@ -14,15 +13,12 @@ import {
 // import Customer from './components/Customer';
 // import Mover from './components/Mover';
 import SignUp from './components/SignUp/SignUp';
-import Nav from './components/nav/nav';
 import Login from './components/Login/Login';
 
 
 
 import { MyNavbar } from './Shared/nav/nav2';
-import { LogIn } from './Pages/LogIn/loginpage'
 import { Footer } from './Shared/footer/footer';
-import { SignUpPage } from './Pages/SignUp/signuppage';
 import { Customer } from './Pages/Customer/customer';
 import { Home } from './Pages/Home/home';
 import { Mover } from './Pages/Mover/mover';

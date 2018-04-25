@@ -1,7 +1,4 @@
 import React, { Component } from "react";
-import { MyNavbar } from "../../Shared/nav/nav2";
-import { Footer } from "../../Shared/footer/footer";
-import { Image, Grid, Row, Col,Thumbnail, Button, Glyphicon } from "react-bootstrap";
 import MapWithAMarker from "../../Shared/googlemap/MapContainer";
 import './mover.css'
 
