@@ -1,14 +1,12 @@
 import React, { Component } from "react";
 import {
   Modal,
-  ModalHeader,
-  ModalFooter,
-  Tabs,
-  Tab,
+  // Tabs,
+  // Tab,
   Table,
   Button
 } from "react-bootstrap";
-import API from "../../utils/api";
+import API from "../../utils/apihelpers";
 //import MapWithAMarker from "../../Shared/googlemap/MapContainer";
 import MapWithADirectionsRenderer from "./mapwithdirection";
 const google = window.google;

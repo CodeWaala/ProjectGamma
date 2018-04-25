@@ -157,3 +157,7 @@ a {
 #signup {
     margin-bottom: 50px !important;
 }
+
+#div>root{
+	overflow-x: hidden !important;
+}

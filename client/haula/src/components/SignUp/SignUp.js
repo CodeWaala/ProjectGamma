@@ -40,6 +40,7 @@ class SignUp extends React.Component {
 					/>
 				</div>
 				</p>
+				<p>
 				<ControlLabel>Email Address</ControlLabel>
 				<div className="form-label-group">
 					<input  type="email"
@@ -52,6 +53,8 @@ class SignUp extends React.Component {
 							required=""
 					/>
 				</div>
+				</p>
+				<p>
 				<ControlLabel>Password</ControlLabel>
 				<div className="form-label-group">
 					<input  type="password" 
@@ -61,6 +64,7 @@ class SignUp extends React.Component {
 							required=""
 					/>
 				</div>
+				</p>
 
 
 				<div class="checkbox mb-3">
@@ -71,8 +75,6 @@ class SignUp extends React.Component {
 
 				<input class="btn" type="submit" value="Sign Up" onclick="validate()" />
 			
-
-				<p class="mt-5 mb-3 text-muted text-center">© 2017-2018</p>
 			</form>
 		</body>
 		</div>

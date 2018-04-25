@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Lato" rel="stylesheet');
+
 /* .body{
         position: relative;
         background-color: #F2EEDD;
@@ -25,9 +27,13 @@
     height: 100px;
 }
 
+.second {
+    z-index: 0;
+}
+
 .parallax { 
         /* The image used */
-        
+        width: 100%;
         /* Set a specific height */
         height: 500px; 
     
@@ -36,6 +42,37 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        z-index: -1;
+        position: relative;
     }
+
+.mover-btn{
+    position: absolute;
+    left: 28%;
+    top: 59%;
+    color: #26abf8;
+    background-color: white !important;
+    padding: 12px 50px;
+    border-radius: 4px;
+    font-family: 'Lato', sans-serif; 
+}
+
+.customer-btn {
+    position: absolute;
+    left: 60%;
+    top: 59%;
+    color: #26abf8;
+    background-color: white !important;
+    padding: 12px 50px;
+    border-radius: 4px;
+    font-family: 'Lato', sans-serif;
+}
+
+.boxes {
+    position: absolute;
+    top: 1%;
+    left: 350px;
+    height: 500px !important;
+}
 
    

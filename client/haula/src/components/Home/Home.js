@@ -1,4 +1,5 @@
 import React from 'react';
+import ContactModal from './components/contact'
 
 
 export class Home extends React.Component {
