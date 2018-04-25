@@ -9,9 +9,5 @@ export default {
   getOrdersPending : function() {
       return axios.get("/api/orders/pending");
   }
-
-  // getDirections : function() {
-  //   return 
-  // }
  
 };
