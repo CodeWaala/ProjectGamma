@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Image, Grid, Row, Col } from 'react-bootstrap';
 import './home.css';//
-import background1 from '../../Shared/main_images/main_box1-02.jpg';
+import bg1 from '../../Shared/main_images/main_bg.jpg';
+import boxes from '../../Shared/main_images/main_boxes.png';
 
 
 <img src={background1} alt=""/>
@@ -20,8 +21,15 @@ export class Home extends Component {
     render() {
       return (
         <div className="App">
-                <div className='parallax img1'>
+                <div className='parallax bg1' style={{backgroundColor:"#50dfbf"}}>
+                    <div>
+                        <img src={bg1} className='boxes'/>;
+                    </div>
+                    <Button className="customer-btn">Customer</Button>
+                    <Button className="mover-btn">Mover</Button>
+
                 </div>
+
                 <div style={{height: "500px", backgroundColor: "white",display: 'flex', justifyContent: 'center', alignItems: 'center'}} >
                     <div class="row-container">
                     <Grid>
