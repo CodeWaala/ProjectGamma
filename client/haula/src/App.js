@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import {
   BrowserRouter as Router,
   Route,
-  PrivateRoute,
   Link,
   Switch,
   Redirect
@@ -29,6 +28,7 @@ import { Home } from './Pages/Home/home';
 import { Mover } from './Pages/Mover/mover';
 import { Help } from './Pages/Help/help';
 
+
 class App extends Component {
   render() {
     return (
@@ -45,9 +45,9 @@ class App extends Component {
                 <Route exact path='/Help' component={Help} />
                 <Route render= {() => <p>Page Not Found 404</p>} />  
             </Switch>
-          </div>
-          </Router>
           <Footer/>
+          </div>
+      </Router>
       </div>
     )
   }
