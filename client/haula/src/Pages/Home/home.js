@@ -22,8 +22,14 @@ export class Home extends Component {
       return (
         <div className="App">
                 <div className='parallax bg1' style={{backgroundColor:"#50dfbf"}}>
-                    <div>
-                        <img src={bg1} className='boxes'/>;
+                    <div className="row-container-main">
+                        <Grid>
+                            <Row>
+                                <Col>
+                                <Image src={bg1} className='boxes' responsive/>;
+                                </Col>
+                            </Row>
+                        </Grid>
                     </div>
                     <Button className="customer-btn">Customer</Button>
                     <Button className="mover-btn">Mover</Button>
