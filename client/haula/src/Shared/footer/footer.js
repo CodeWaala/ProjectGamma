@@ -32,7 +32,7 @@ export class Footer extends Component {
   render() {
     return (
       <footer id="Footer">
-        <div className="container flex-1">
+        <div className="container">
           <div class="row footergrid">
             <div class="col-sm-3">
               <h2 class="logo">

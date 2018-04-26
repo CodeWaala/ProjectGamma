@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Lato" rel="stylesheet');
 
 .navbar-default{
     background-color: white;
@@ -17,6 +18,7 @@
     margin: 0 auto;
     padding: 15px 50px;
     border-radius: 4px;
+    font-family: 'Lato', sans-serif;
 }
 
 .loginButton{
@@ -25,6 +27,7 @@
     padding: 15px 50px;
     margin: 8px 0 0 0 !important;
     border-radius: 4px;
+    font-family: 'Lato', sans-serif;
 }
 
 .helpButton{
@@ -33,6 +36,7 @@
     padding: 15px 50px;
     border-radius: 4px;
     margin: 0;
+    font-family: 'Lato', sans-serif;
 }
 
 .navbar-brand>img{
