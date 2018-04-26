@@ -7,8 +7,13 @@
   bottom: 0;
   width: 100%;
 }
+
+#Footer>.container {
+  margin:0 auto;
+}
+
 .footergrid{
-  height: 100px;
+  height: 150px;
 }
 
 .logoFooter {
@@ -30,13 +35,15 @@
 }
 
 #Footer .footer-copyright {
-  background-color: #333333;
+  background-color: #333;
   padding-top: 3px;
   padding-bottom: 3px;
   text-align: center;
+
 }
-.footer-copyright{
+.footer-copyright {
   position: relative;
+  color: white !important;
 }
 .getStarted {
   margin-right: 20px !important;
@@ -53,7 +60,7 @@
 
 #Footer .footer-copyright p {
   margin: 10px;
-  color: black;
+  color: white;
 }
 
 #Footer ul {
@@ -91,11 +98,12 @@
   text-align: center;
   padding-top: 30px;
   padding-bottom: 16px;
+  color: gray;
 }
 
 #Footer .social-networks a {
   font-size: 32px;
-  color: #f9f9f9;
+  color: gray !important;
   padding: 10px;
   transition: 0.2s;
 }
@@ -105,7 +113,7 @@
 }
 
 #Footer .facebook:hover {
-  color: #0077e2;
+  color: gray;
 }
 
 #Footer .google:hover {
