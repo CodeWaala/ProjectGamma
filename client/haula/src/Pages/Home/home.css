@@ -22,6 +22,12 @@
     width: 100%;
 }
 
+.row-containerTwo {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
 .row-container{
     display: flex;
     align-content: center;
@@ -30,6 +36,13 @@
     top: 10%;
     left: 15%;
 }
+
+.row-container-main {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
 
 .personIcon{
     justify-content: center;
@@ -82,7 +95,7 @@
 }
 
 .boxes {
-    position: absolute;
+    flex: 0;
     top: 1%;
     left: 350px;
     height: 500px !important;
@@ -95,15 +108,145 @@
 }
 
 .stepOne {
+    flex: 0;
     position: absolute;
-    left: 260px;
+    left: 19%;
     top: 0;
     height: 600px !important;
 }
 
 .stepTwo {
     position: absolute;
-    left: 370px;
+    left: 28%;
     top:590px;
     width: 50% !important;
+}
+
+
+@media screen and (max-width: 1473px) {
+  .mover-btn{
+        position: absolute;
+        left: 22%;
+        top: 57%;
+        color: #26abf8;
+        background-color: white !important;
+        padding: 12px 50px;
+        border-radius: 4px;
+        font-family: 'Lato', sans-serif;
+        font-size: 25px; 
+    }
+
+    .customer-btn {
+        position: absolute;
+        left: 62%;
+        top: 57%;
+        color: #26abf8;
+        background-color: white !important;
+        padding: 12px 50px;
+        border-radius: 4px;
+        font-family: 'Lato', sans-serif;
+        font-size: 25px;
+    }
+    .stepOne {
+        flex: 0;
+        position: absolute;
+        left: 15%;
+        top: 0;
+        height: 600px !important;
+    }
+
+    .stepTwo {
+        position: absolute;
+        left: 23%;
+        top: 590px;
+        width: 55% !important;
+    }
+}
+
+@media screen and (max-width: 1176px) {
+  .mover-btn{
+        position: absolute;
+        left: 19%;
+        top: 57%;
+        color: #26abf8;
+        background-color: white !important;
+        padding: 12px 50px;
+        border-radius: 4px;
+        font-family: 'Lato', sans-serif;
+        font-size: 25px; 
+    }
+
+    .customer-btn {
+        position: absolute;
+        left: 64%;
+        top: 57%;
+        color: #26abf8;
+        background-color: white !important;
+        padding: 12px 50px;
+        border-radius: 4px;
+        font-family: 'Lato', sans-serif;
+        font-size: 25px;
+    }
+
+    .stepOne {
+        flex: 0;
+        position: absolute;
+        left: 7%;
+        top: 0;
+        height: 600px !important;
+    }
+
+    .stepTwo {
+        position: absolute;
+        left: 19%;
+        top: 590px;
+        width: 65% !important;
+    }
+}
+
+@media screen and (max-width: 1037px) {
+  .mover-btn{
+        position: absolute;
+        left: 22%;
+        top: 57%;
+        color: #26abf8;
+        background-color: white !important;
+        padding: 12px 50px;
+        border-radius: 4px;
+        font-family: 'Lato', sans-serif;
+        font-size: 25px; 
+    }
+
+    .customer-btn {
+        position: absolute;
+        left: 62%;
+        top: 57%;
+        color: #26abf8;
+        background-color: white !important;
+        padding: 12px 50px;
+        border-radius: 4px;
+        font-family: 'Lato', sans-serif;
+        font-size: 25px;
+    }
+    .stepOne {
+        flex: 0;
+        position: absolute;
+        left: 2%;
+        top: 0;
+        height: 600px !important;
+    }
+
+    .stepTwo {
+        position: absolute;
+        left: 12%;
+        top:590px;
+        width: 75% !important;
+    }
+
+    .personIcon{
+        justify-content: center;
+        align-content: center;
+        width: 100px;
+        height: 100px;
+    }
 }
