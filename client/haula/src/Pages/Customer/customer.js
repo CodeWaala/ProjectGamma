@@ -316,19 +316,20 @@ export class Customer extends Component {
           </Table>
           <h4 className="requestButton">
               Select A Mover Here!
-        
+            </h4>
+        <div>
         <Button
              bsStyle="primary align-right"
              bsSize="small"
              onClick={this.handleShow}>
              Request
         </Button>
-        </h4>
         </div>
         <div className="flex-2">
-          <div id="Map" ref="map"  className="mapPosition"/>
+          <div id="Map" ref="map"/>
         </div>
       </div>
+    </div>
     );
   }
 }
