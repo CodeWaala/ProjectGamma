@@ -1,34 +1,55 @@
+import {
+    BrowserRouter as Router,
+    Link,
+    Route,
+    Switch,
+    Redirect
+  } from 'react-router-dom';
+  import { Dashboard } from '../Pages/Dashboard/Dashboard';
 import React, { Component } from "react";
 import API from "../../utils/apihelpers.js";
 
 export class SignUpPage extends Component {
+    constructor(props){
+        super(props)  
+        this.state = {
+            shouldRedirect: false
+        }
+    }
 
     componentDidMount() {
         this.getMovesInfo();
     }
 
-    getMovesInfo = () => {
+    getMovesInfo = (e) => {
+        e.preventDefault();
         //api call to get data from DB (moves or order information)
         API.signup()
-         .then(res => this.setState())
+         .then(res => {
+             this.setState({shouldRedirect: true})
+             console.log("setting shouldredirect to true")
+         })
          .catch(err => console.log(err));
     }
 
     render() {
         return (
-            <body data-gr-c-s-loaded="true">
-                <form id="signup" name="signup" method="post" action="/api/signup">
-                    <label for="email">Email Address</label>
-                    <input class="text" name="email" type="email" required/>
-                    <label for="firstname">Firstname</label>
-                    <input name="firstname" type="text" />
-                    <label for="lastname">Lastname</label>
-                    <input name="lastname" type="text" />
-                    <label for="password">Password</label>
-                    <input name="password" type="password" required/>
-                    <input class="btn" type="submit" value="Sign Up" onclick="validate()" />
-                </form>
-    </body>
+            <div>
+                { (this.state.shouldRedirect)? <Redirect to="/dashboard" /> : null }
+                        <body data-gr-c-s-loaded="true">
+                            <form id="signup" name="signup" method="post" /*action="/dashboard "*/>
+                                <label for="email">Email Address</label>
+                                <input class="text" name="email" type="email" required/>
+                                <label for="firstname">Firstname</label>
+                                <input name="firstname" type="text" />
+                                <label for="lastname">Lastname</label>
+                                <input name="lastname" type="text" />
+                                <label for="password">Password</label>
+                                <input name="password" type="password" required/>
+                                <input class="btn" type="submit" value="Sign Up" onclick="validate()"/>
+                            </form>
+                        </body>
+            </div>
 
 
                 // <form class="form-signin">

@@ -13,29 +13,34 @@ module.exports = (sequelize, DataTypes) => {
     username: {
       type: DataTypes.STRING,
       unique: true,
-      allowNull: false
+      // allowNull: false
     },
     password: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true,
+      defaultValue: "Password",
+      // notEmpty: true,
+      // nullable: true
     },
     email: {
       type: DataTypes.STRING,
-      unique: true,
-      allowNull: false,
-      validate: {
-        isEmail: true
-      }
+      // unique: true,
+      // nullable: true,
+      defaultValue: "Email Address",
+      // // allowNull: false,
+      // validate: {
+      //   isEmail: true
+      // }
     },
-    status: {
-      type: DataTypes.ENUM("active", "inactive"),
-      defaultValue: "active"
-    },
-    profile: {
-      type: DataTypes.ENUM("Mover", "Customer", "Admin"),
-      defaultValue: "Customer",
-      allowNull: false
-    },
+    // status: {
+    //   type: DataTypes.ENUM("active", "inactive"),
+    //   defaultValue: "active"
+    // },
+    // profile: {
+    //   type: DataTypes.ENUM("Mover", "Customer", "Admin"),
+    //   defaultValue: "Customer",
+    //   // allowNull: false
+    // },
     // createdAt: {
     //     type: DataTypes.DATE(3),
     //     defaultValue: sequelize.literal('CURRENT_TIMESTAMP(3)'),

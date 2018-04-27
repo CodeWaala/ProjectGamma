@@ -23,7 +23,7 @@ import { Customer } from './Pages/Customer/customer';
 import { Home } from './Pages/Home/home';
 import { Mover } from './Pages/Mover/mover';
 import { Help } from './Pages/Help/help';
-importn { Dashboard } from './Pages/Dashboard/Dashboard';
+import { Dashboard } from './Pages/Dashboard/Dashboard';
 
 
 class App extends Component {

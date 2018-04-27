@@ -10,12 +10,12 @@ export default {
       return axios.get("/api/orders/pending");
   },
   signup: function () {
-    return axios.post("api/signup");
+    return axios.post("/api/signup");
 },
 
-// login: function () {
-//     return axios.get("/signin");
-// },
+login: function () {
+    return axios.get("/signin");
+}
 
 // signout: function () {
 //     return axios.get("/signout");
