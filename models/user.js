@@ -6,7 +6,6 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       notEmpty: true
   },
-
   lastname: {
       type: DataTypes.STRING,
       notEmpty: true
@@ -14,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
     username: {
       type: DataTypes.STRING,
       unique: true,
-      //allowNull: false
+      allowNull: false
     },
     password: {
       type: DataTypes.STRING,
@@ -35,7 +34,7 @@ module.exports = (sequelize, DataTypes) => {
     profile: {
       type: DataTypes.ENUM("Mover", "Customer", "Admin"),
       defaultValue: "Customer",
-      //allowNull: false
+      allowNull: false
     },
     // createdAt: {
     //     type: DataTypes.DATE(3),
@@ -45,7 +44,8 @@ module.exports = (sequelize, DataTypes) => {
     //     type: DataTypes.DATE(3),
     //     defaultValue: sequelize.literal('CURRENT_TIMESTAMP(3) ON UPDATE CURRENT_TIMESTAMP(3)'),
     //   },
-  }, {
+  }, 
+  {
       timestamps:false
   });
 
