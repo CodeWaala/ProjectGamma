@@ -57,6 +57,9 @@ export class Mover extends Component {
         <div className="flex-1">
         {console.log(this.state.moverequests)}
           <MoveCardContainer>
+          <svg height="100" width="100">
+  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" fill="url('waldomain.png')" />
+</svg>
           {
             this.state.moverequests.map((request, i) => (
             <MoverCard
