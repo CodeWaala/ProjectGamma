@@ -13,3 +13,7 @@
 .flex-2 > div {
     height: 100%;
 }
+
+.pac-container {
+    z-index: 1500 !important;
+  }
