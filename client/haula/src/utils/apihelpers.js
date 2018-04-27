@@ -10,18 +10,17 @@ export default {
       return axios.get("/api/orders/pending");
   },
   signup: function () {
-    return axios.post("/signup");
+    return axios.post("api/signup");
 },
 
-login: function () {
-    return axios.get("/signin");
-},
+// login: function () {
+//     return axios.get("/signin");
+// },
 
-signout: function () {
-    return axios.get("/signout");
+// signout: function () {
+//     return axios.get("/signout");
   // getDirections : function() {
   //   return 
   // }
  
-}
 }

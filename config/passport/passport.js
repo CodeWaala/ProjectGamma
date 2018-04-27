@@ -66,7 +66,8 @@ module.exports = function (passport, user, customer, mover, orders) {
 
                         };
                     // adds new entries to the database
-                    User.create(data).then(function (newUser, created) {
+                    User.create(data)
+                        .then(function (newUser, created) {
 
                         if (!newUser) {
 
