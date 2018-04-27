@@ -23,6 +23,7 @@ import { Customer } from './Pages/Customer/customer';
 import { Home } from './Pages/Home/home';
 import { Mover } from './Pages/Mover/mover';
 import { Help } from './Pages/Help/help';
+importn { Dashboard } from './Pages/Dashboard/Dashboard';
 
 
 class App extends Component {
@@ -39,7 +40,9 @@ class App extends Component {
                 <Route exact path='/Customer' component={Customer} />
                 <Route exact path='/Mover' component={Mover} />
                 <Route exact path='/Help' component={Help} />
-                <Route render= {() => <p>Page Not Found 404</p>} />  
+                <Route render= {() => <p>Page Not Found 404</p>} />
+                <Route exact path='/Dashboard' component={Dashboard} />
+
             </Switch>
           <Footer/>
           </div>
