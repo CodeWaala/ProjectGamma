@@ -295,12 +295,12 @@ export class Customer extends Component {
                           />
                         </div>
                         <button type="submit" className="btn-default" id="Submit">
-                          <i className="fa fa-search" />
+                          <i className="search" />
                           Submit
                         </button>
 
                         <button type="button" className="btn-default" id="clearAll">
-                          <i className="fa fa-trash" />
+                          <i className="trash" />
                           Clear Results
                         </button>
                         <button type="addImage" className="btn-default">
