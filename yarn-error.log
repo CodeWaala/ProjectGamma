@@ -1,14 +1,14 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\Leeland\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js install express-session
+  C:\program files\nodejs\node.exe C:\Users\bharab8\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js start
 
 PATH: 
-  C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\MongoDB\Server\3.6\bin;C:\Users\Leeland\AppData\Local\Programs\Python\Python36-32\Scripts\;C:\Users\Leeland\AppData\Local\Programs\Python\Python36-32\;C:\Users\Leeland\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Heroku\bin;C:\Users\Leeland\AppData\Roaming\npm;;C:\Program Files\Microsoft VS Code\bin
+  C:\Users\bharab8\AppData\Roaming\npm;C:\program files\nodejs\;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;c:\Program Files\Lenovo\Fingerprint Manager Pro\;C:\Program Files (x86)\PuTTY\;C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\ManagementStudio\;C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\110\DTS\Binn\;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\WebEx\Productivity Tools;C:\Program Files (x86)\MySQL\MySQL Utilities 1.3.5\;C:\Program Files (x86)\Sennheiser\SoftphoneSDK\;C:\Users\bharab8\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\dotnet\;C:\program files\MongoDB\Server\3.2\bin;C:\Program Files\nodejs\;C:\program files\Java\jre8\bin;C:\Users\bharab8\AppData\Local\Programs\Fiddler
 
 Yarn version: 
   1.5.1
 
 Node version: 
-  6.11.3
+  8.10.0
 
 Platform: 
   win32 x64
@@ -3560,21 +3560,17 @@ Lockfile:
       fd-slicer "~1.0.1"
 
 Trace: 
-<<<<<<< HEAD
-  Error: `install` has been replaced with `add` to add new dependencies. Run "yarn add express-session" instead.
-      at MessageError.Error (native)
-      at new MessageError (C:\Users\Leeland\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:186:110)
-      at Object.<anonymous> (C:\Users\Leeland\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:21987:13)
-      at next (native)
-      at step (C:\Users\Leeland\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:98:30)
-      at C:\Users\Leeland\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:109:13
-=======
-  Error: Couldn't find package "express-sesion" on the "npm" registry.
-      at new MessageError (C:\Users\bharab8\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:186:110)
-      at NpmResolver.<anonymous> (C:\Users\bharab8\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:51625:15)
-      at Generator.next (<anonymous>)
-      at step (C:\Users\bharab8\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:98:30)
-      at C:\Users\bharab8\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:109:13
-      at <anonymous>
-      at process._tickCallback (internal/process/next_tick.js:188:7)
->>>>>>> 5b99b854ecd7f2ad6ceaad20f6335d1bf793148c
+  Error: Command failed.
+  Exit code: 3221225786
+  Command: C:\Windows\system32\cmd.exe
+  Arguments: /d /s /c concurrently "nodemon server.js" "npm run client"
+  Directory: C:\Users\bharab8\Desktop\code\UCSD2017github\ProjectGamma
+  Output:
+  
+      at ProcessTermError.MessageError (C:\Users\bharab8\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:186:110)
+      at new ProcessTermError (C:\Users\bharab8\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:226:113)
+      at ChildProcess.<anonymous> (C:\Users\bharab8\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:30281:17)
+      at emitTwo (events.js:126:13)
+      at ChildProcess.emit (events.js:214:7)
+      at maybeClose (internal/child_process.js:925:16)
+      at Process.ChildProcess._handle.onexit (internal/child_process.js:209:5)
