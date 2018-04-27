@@ -238,6 +238,7 @@ export class Mover extends Component {
     return (
       <div className="flex-box">
           <MoveCardContainer>
+<<<<<<< HEAD
             {this.state.moverequests.map((request, i) => (
               <MoverCard
                 key={request.id}
@@ -252,6 +253,22 @@ export class Mover extends Component {
               />
             ))}
           </MoveCardContainer>
+=======
+          <svg height="100" width="100">
+  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" fill="url('waldomain.png')" />
+</svg>
+          {
+            this.state.moverequests.map((request, i) => (
+            <MoverCard
+              key={request.key}
+              price={request.expectedprice}
+              toaddress={request.toaddress}
+              fromaddress={request.fromaddress}
+            />
+          ))}
+        </MoveCardContainer>
+        </div>
+>>>>>>> 4eb19d4f4c9ead169c2f48122ad6983c9e9ef08d
         <div className="flex-2">
             <div id="Map" ref="map"></div>
         </div>

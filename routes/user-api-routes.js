@@ -1,4 +1,4 @@
-const userController = require('../controllers/usercontroller.js');
+// const userController = require('../controllers/usercontroller.js');
 const express = require("express");
 const router = express.Router();
 const db = require("../models");
@@ -6,7 +6,6 @@ const db = require("../models");
 // Routes
 // =============================================================
 
-module.exports = function (passport) {
     //get all the users
     router.get("/api/users", (req, res) => {
         db.User.findAll({}).then(users => {
@@ -27,8 +26,9 @@ module.exports = function (passport) {
     });
 
     //post a new user
-    router.post("/api/user", (req, res) => {
-        db.User.create(req.body).then(dbuser => {
+    router.post("/api/signup", (req, res) => {
+        db.User.create(req.body)
+        .then(dbuser => {
             res.json(dbuser);
         });
     });
@@ -51,40 +51,39 @@ module.exports = function (passport) {
         })
     });
 
-    app.post('/signup', passport.authenticate('local-signup', {
-            successRedirect: '/dashboard',
+    // router.post('/signup', userController.create, passport.authenticate('local-signup', {
+    //         successRedirect: '/dashboard',
 
-            failureRedirect: '/signup'
+    //         failureRedirect: '/signup'
 
-        }
+    //     }
 
-    ));
+    // ));
 
-    //app.get('/dashboard', isLoggedIn, userController.dashboard);
+    // //router.get('/dashboard', isLoggedIn, userController.dashboard);
 
 
 
-    app.get('/logout', userController.logout);
+    // router.get('api/logout', userController.logout);
 
-    app.post('/signin', passport.authenticate('local-signin', {
-            successRedirect: '/dashboard',
+    // router.post('api/signin', passport.authenticate('local-signin', {
+    //         successRedirect: '/dashboard',
 
-            failureRedirect: '/signin'
+    //         failureRedirect: '/signin'
 
-        }
+    //     }
 
-    ));
+    // ));
 
-    // protects /dashboard route unless sign in
-    function isLoggedIn(req, res, next) {
+    // // protects /dashboard route unless sign in
+    // function isLoggedIn(req, res, next) {
 
-        if (req.isAuthenticated())
+    //     if (req.isAuthenticated())
 
-            return next();
+    //         return next();
 
-        res.redirect('/signin');
+    //     res.redirect('/signin');
 
-    }
-}
+    // }
 
 module.exports = router;
