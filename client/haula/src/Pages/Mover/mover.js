@@ -18,8 +18,8 @@ import { MoveCardContainer } from "./movecardcontainer/movecardcontainer.js";
 import MoverCard from "./movecard/movercard";
 import API from "../../utils/apihelpers";
 import orders from "./orders.json";
-import IconUrl from "../Home/components/images/GRAY-PIN.png";
-import IconUrlHover from "../Home/components/images/red-pin.png";
+import IconUrl from "../Home/components/images/blue_truck.png";
+import IconUrlHover from "../Home/components/images/red_truck1.png";
 import FurnitureImage from "../Home/components/images/furniture-Image.jpg";
 
 //const $ = window.jQuery;
@@ -148,12 +148,13 @@ export class Mover extends Component {
           // marker.setIcon({
           //   url: IconUrlHover
           // });
-          let markersinfo = Object.assign({}, marker);
+          let markersinfo = Object.assign({}, this.state.MarkersInfo);
+          markersinfo[key] = marker
           this.setState({
             MarkersInfo : markersinfo
           })
 
-          console.log("Markersinfo: " + this.state.MarkersInfo.key);
+          console.log("Markersinfo: " + this.state.MarkersInfo[key]);
           console.log(this.state.MarkersInfo);
           // this.state.MarkersInfo[1].setIcon({
           //   url: IconUrlHover
@@ -186,7 +187,7 @@ export class Mover extends Component {
           google.maps.event.addListener(marker, "mouseover", function(e) {
             //ToDO: on mouseover link the left tile with marker
             // $('.customer-card[data-key=' +  key + ']').css("opacity", "0.5");
-            console.log(e);
+           // console.log(e);
           });
           google.maps.event.addListener(marker, "mouseout", function() {
             //ToDO: change marker and remove the link to left tile
@@ -199,18 +200,8 @@ export class Mover extends Component {
     );
   }
 
-  // cardHovered() {
-  //   //alert($(this).attr("data-movefrom"));
-  //   MouseOver($(this).attr("data-key"));
-  //   //change the marker image based on the address
-  // }
-  
-  // cardOut() {
-  //   MouseOut($(this).attr("data-key"));
-  // }
-
   AcceptClicked(key) {
-     alert(key);
+     //alert(key);
      API.AcceptOrder(key)
      .then(res => { 
           
@@ -218,27 +209,24 @@ export class Mover extends Component {
      .catch(err => console.log(err));
   }
 
-  // MouseOver(key) {
-  //   alert("mouseover");
-  //   //alert(key);
-  //   alert(this.state.MarkersInfo.key);
-  //   // this.state.MarkersInfo[3].setIcon({
-  //   //   url: IconUrlHover
-  //   // });  
-  // }
+  MouseOver(key) {
+   // alert("mouseover");
+    this.state.MarkersInfo[key].setIcon({
+      url: IconUrlHover
+    });  
+  }
   
-  // MouseOut(key) {
-  //   alert("mouseout");
-  //   // this.state.MarkersInfo[key].setIcon({
-  //   //   url: IconUrl
-  //   // });
-  // }
+  MouseOut(key) {
+    //alert("mouseout");
+    this.state.MarkersInfo[key].setIcon({
+      url: IconUrl
+    });
+  }
 
   render() {
     return (
       <div className="flex-box">
           <MoveCardContainer>
-<<<<<<< HEAD
             {this.state.moverequests.map((request, i) => (
               <MoverCard
                 key={request.id}
@@ -246,29 +234,13 @@ export class Mover extends Component {
                 toaddress={request.toaddress}
                 fromaddress={request.fromaddress}
                 orderstatus={request.orderstatus}
-                onMouseOver={this.MouseOver}
-                onMouseLeave={this.MouseOut}
+                onMouseOver={() => this.MouseOver(request.id)}
+                onMouseLeave={() => this.MouseOut(request.id)}
                 onAccept={() => this.AcceptClicked(request.id, request.orderstatus)}
                 Image={FurnitureImage}
               />
             ))}
           </MoveCardContainer>
-=======
-          <svg height="100" width="100">
-  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" fill="url('waldomain.png')" />
-</svg>
-          {
-            this.state.moverequests.map((request, i) => (
-            <MoverCard
-              key={request.key}
-              price={request.expectedprice}
-              toaddress={request.toaddress}
-              fromaddress={request.fromaddress}
-            />
-          ))}
-        </MoveCardContainer>
-        </div>
->>>>>>> 4eb19d4f4c9ead169c2f48122ad6983c9e9ef08d
         <div className="flex-2">
             <div id="Map" ref="map"></div>
         </div>
