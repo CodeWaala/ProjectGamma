@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { Image, Grid, Row, Col } from 'react-bootstrap';
+import { Image, Grid, Row, Col, Button } from 'react-bootstrap';
 import './home.css';//
 import bg1 from '../../Shared/main_images/main_bg.jpg';
 import boxes from '../../Shared/main_images/main_boxes.png';
 
 
-<img src={background1} alt=""/>
+{/* <img src={background1} alt=""/> */}
 
 const personHolder = require('./components/images/person-icon.png')
 

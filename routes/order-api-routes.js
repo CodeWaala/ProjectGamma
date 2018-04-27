@@ -56,5 +56,17 @@ router.get("/api/orders/completed", (req,res) => {
     })
 });
 
+//update accepted order 
+router.put("/api/order/:id", (req,res) => {
+      db.Order.update({orderstatus: "accepted"}, {
+          where : {
+              id : req.params.id
+          }
+      })
+       .then(dbOrders => {
+          res.json(dbOrders);
+      })
+      .catch(err => res.status(422).json(err));
+})
 module.exports = router;
 
