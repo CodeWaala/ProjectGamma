@@ -3,8 +3,10 @@ var exports = module.exports = {}
 
 exports.signup = function (req, res) 
 {
-    console.log('signup is working');
-    res.render('signup');
+    db.User
+      .create(req.body)
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
 }
 
 exports.signin = function (req, res) 
