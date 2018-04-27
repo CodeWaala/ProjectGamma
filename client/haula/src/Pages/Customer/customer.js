@@ -146,14 +146,6 @@ export class Customer extends Component {
   render() {
     return (
       <div className="flex-box">
-        <div className="Resquest">
-        <Button
-             bsStyle="primary"
-             bsSize="small"
-             onClick={this.handleShow}>
-             Request
-        </Button>
-        </div>
         <div className="flex-1">
           <Table responsive>
             <thead>
@@ -322,9 +314,19 @@ export class Customer extends Component {
               ))}
             </tbody>
           </Table>
+          <h4 className="requestButton">
+              Select A Mover Here!
+        
+        <Button
+             bsStyle="primary align-right"
+             bsSize="small"
+             onClick={this.handleShow}>
+             Request
+        </Button>
+        </h4>
         </div>
         <div className="flex-2">
-          <div id="Map" ref="map" />
+          <div id="Map" ref="map"  className="mapPosition"/>
         </div>
       </div>
     );
