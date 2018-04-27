@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Image, Grid, Row, Col, Button, Glyphicon } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './home.css';//
 import bg1 from '../../Shared/main_images/main_bg.jpg';
 import boxes from '../../Shared/main_images/main_boxes.png';
@@ -31,9 +32,9 @@ export class Home extends Component {
                             </Row>
                         </Grid>
                     </div>
-                    <Button className="customer-btn">Customer</Button>
-                    <Button className="mover-btn">Mover</Button>
-
+                    
+                    <Link to="/customer" role="button" className="customer-btn">Customer</Link>
+                    <Link to="/mover" role="button" className="mover-btn">Mover</Link>
                 </div>
 
                 <div className='containerTwo' style={{height: "500px", backgroundColor: "white",display: 'flex', justifyContent: 'center', alignItems: 'center'}} >
