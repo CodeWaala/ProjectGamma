@@ -38,9 +38,11 @@ h3{
     align-content: center;
 }
 .icons{
+    font-size: 50px;
+    justify-content: center;
     position: relative;
-    align-content: center;
-    left: 50px;
+    left:110px;
+    color: darkgrey;
 }
 
 
@@ -55,7 +57,7 @@ h3{
     align-content: center;
     justify-content: center;
     position: absolute;
-    top: 10%;
+    top: 11%;
     left: 15%;
 }
 
