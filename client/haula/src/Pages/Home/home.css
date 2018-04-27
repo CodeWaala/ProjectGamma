@@ -16,11 +16,33 @@
 }*/
 
 .containerTwo {
+    display: flex;
     position: relative;
     top:0;
     left:0;
     width: 100%;
 }
+.boxy{
+    position: relative;
+    right: 45px;
+    width:300px;
+    height:300px;
+    font-family: 'Lato', sans-serif;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+h3{
+    align-items: center;
+    position: relative;
+    align-content: center;
+}
+.icons{
+    position: relative;
+    align-content: center;
+    left: 50px;
+}
+
 
 .row-containerTwo {
     display: flex;

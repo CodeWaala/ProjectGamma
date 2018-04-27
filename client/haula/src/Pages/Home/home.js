@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Image, Grid, Row, Col, Button } from 'react-bootstrap';
+import { Image, Grid, Row, Col, Button, Glyphicon } from 'react-bootstrap';
 import './home.css';//
 import bg1 from '../../Shared/main_images/main_bg.jpg';
 import boxes from '../../Shared/main_images/main_boxes.png';
@@ -41,13 +41,31 @@ export class Home extends Component {
                         <Grid>
                             <Row>
                                 <Col>
-                                <Image className="personIcon" src={personHolder} circle responsive />
+                                    <div className="boxy">
+                                    <Glyphicon glyph="ok" className="icons"/>
+                                    <h3 className="text-center">Fast Approach</h3>
+                                    <p className="text-center">
+                                    We count thirty Rebel ships, Lord Vader. But they're so small they're evading our turbo-lasers! We'll have to destroy them ship to ship. Get the crews to their fighters. Luke, let me know when you're going in. I'm on my way in now... Watch yourself! There's a lot of fire coming from the right side of that deflection tower. I'm on it. Squad leaders, we've picked up a new group of signals. Enemy fighters coming your way.
+                                    </p>
+                                    </div>
                                 </Col>
                                 <Col>
-                                <Image className="personIcon" src={personHolder} circle responsive />
+                                    <div className="boxy">
+                                    <Glyphicon glyph="ok" className="icons"/>
+                                    <h3 className="text-center">Local Help</h3>
+                                    <p className="text-center">
+                                    Easy, Chewie. Whoa! Whoa! Help! Chewie, you okay? Where is he? I'm okay, pal. Han! Chewie? Lando! Boba Fett?! Boba Fett?! Where? Lando, grab it! Lower it! I'm trying! Whoa! Whoa! Grab me, Chewie! I'm slipping. Grab it! L--Lando. Grab! Grab it! Almost... You almost got it! Hold it! Whoa! Gently now. All... all right. Now easy, easy. Hold me, Chewie. Chewie! Chewie, give me the gun. Don't move, Lando. No, wait! I thought you were blind! It's all right. Trust me. Don't move. All right! A little higher! Just a little higher! Chewie, Pull us up! Come on! Okay... up, Chewie, up!
+                                    </p>
+                                    </div>
                                 </Col>
                                 <Col>
-                                <Image className="personIcon" src={personHolder} circle responsive />
+                                    <div className="boxy">
+                                    <Glyphicon glyph="ok" className="icons"/>
+                                    <h3 className="text-center">Simple to Use</h3>
+                                    <p className="text-center">
+                                    Aaargh! Chewie! All right, don't lose your temper. I'll come right back and give you a hand. Solo? No sign of life out there, General. The sensors are in place.You'll know if anything comes around. Commander Skywalker reported in yet? No. He's checking out a meteorite that hit near him. With all the meteor activity in this system, it's going to be difficult to spot approaching ships.
+                                    </p>
+                                    </div>
                                 </Col>
                             </Row>
                         </Grid>
@@ -71,84 +89,6 @@ export class Home extends Component {
                     </div>
                 </div>
 
-
-
-
-                {/*<div style={{height: "500px", backgroundColor: "white",display: 'flex', justifyContent: 'center', alignItems: 'center'}} >
-                    <div class="row-container">
-                    <Grid>
-                        <Row>
-                            <Col>
-                            <Image className="personIcon" src={personHolder} circle responsive />
-                            </Col>
-                            <Col>
-                            <Image className="personIcon" src={personHolder} circle responsive />
-                            </Col>
-                            <Col>
-                            <Image className="personIcon" src={personHolder} circle responsive />
-                            </Col>
-                        </Row>
-                    </Grid>
-                    </div>
-                </div>
-                <div className='parallax'>
-                </div>
-             {/* <Parallax ref="parallax" pages={3}>
-
-                        <Parallax.Layer 
-                            offset={0}
-                            speed={0.2} 
-                            factor={0}
-                            style={{ backgroundColor: 'red'}}
-                        />
-                        <Parallax.Layer 
-                            factor={0}
-                            offset={1}
-                            speed={0.2}
-                            style={{ backgroundColor: 'blue' }}
-                        />
-                        <Parallax.Layer
-                            offset={2}
-                            speed={0.2}
-                            style={{ backgroundColor: 'green' }}
-                            factor={0}
-                        />
-
-                        <Parallax.Layer
-                            factor={0.7}
-                            offset={0}
-                            speed={0.5}
-                            style={styles}
-                            onClick={() => this.refs.parallax.scrollTo(1)}
-                        ><Image src={imgSource1} responsive/>
-                        </Parallax.Layer>
-                        
-
-                        <Parallax.Layer
-                            offset={1}
-                            speed={-0.5}
-                            style={{ backgroundColor: 'white'}}
-                            onClick={() => this.refs.parallax.scrollTo(0)}
-                            >
-                            Another page ... <Button/>
-                        </Parallax.Layer>
-
-                        <Parallax.Layer
-                            offset={2}
-                            speed={0.5}
-                            style={styles}
-                            onClick={() => this.refs.parallax.scrollTo(0)}>
-                            The end.
-                        </Parallax.Layer>
-
-                    </Parallax> */}
-          {/* <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <h1 className="App-title">Welcome to React</h1>
-          </header>
-          <p className="App-intro">
-            To get started, edit <code>src/App.js</code> and save to reload.
-          </p> */}
         </div>
       );
     }
