@@ -3,9 +3,9 @@ import { Image, Grid, Row, Col, Button } from 'react-bootstrap';
 import './home.css';//
 import bg1 from '../../Shared/main_images/main_bg.jpg';
 import boxes from '../../Shared/main_images/main_boxes.png';
+import step1 from '../../Shared/main_images/step1.jpg';
+import step2 from '../../Shared/main_images/step2.jpg';
 
-
-{/* <img src={background1} alt=""/> */}
 
 const personHolder = require('./components/images/person-icon.png')
 
@@ -22,15 +22,59 @@ export class Home extends Component {
       return (
         <div className="App">
                 <div className='parallax bg1' style={{backgroundColor:"#50dfbf"}}>
-                    <div>
-                        <img src={bg1} className='boxes'/>;
+                    <div className="row-container-main">
+                        <Grid>
+                            <Row>
+                                <Col>
+                                <Image src={bg1} className='boxes' responsive/>;
+                                </Col>
+                            </Row>
+                        </Grid>
                     </div>
                     <Button className="customer-btn">Customer</Button>
                     <Button className="mover-btn">Mover</Button>
 
                 </div>
 
-                <div style={{height: "500px", backgroundColor: "white",display: 'flex', justifyContent: 'center', alignItems: 'center'}} >
+                <div className='containerTwo' style={{height: "500px", backgroundColor: "white",display: 'flex', justifyContent: 'center', alignItems: 'center'}} >
+                    <div class="row-container">
+                        <Grid>
+                            <Row>
+                                <Col>
+                                <Image className="personIcon" src={personHolder} circle responsive />
+                                </Col>
+                                <Col>
+                                <Image className="personIcon" src={personHolder} circle responsive />
+                                </Col>
+                                <Col>
+                                <Image className="personIcon" src={personHolder} circle responsive />
+                                </Col>
+                            </Row>
+                        </Grid>
+                    </div>
+                </div>
+
+                <div className='stepOne-box' style={{height: "500px", backgroundColor: "white",display: 'flex', justifyContent: 'center', alignItems: 'center'}} >
+                    <div class="row-containerTwo">
+                        <Grid>
+                            <Row>
+                                <Col>
+                                <Image className="stepOne" src={step1} responsive />
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col>
+                                <Image className="stepTwo" src={step2} responsive />
+                                </Col>
+                            </Row>
+                        </Grid>
+                    </div>
+                </div>
+
+
+
+
+                {/*<div style={{height: "500px", backgroundColor: "white",display: 'flex', justifyContent: 'center', alignItems: 'center'}} >
                     <div class="row-container">
                     <Grid>
                         <Row>
@@ -44,7 +88,7 @@ export class Home extends Component {
                             <Image className="personIcon" src={personHolder} circle responsive />
                             </Col>
                         </Row>
-                        </Grid>;
+                    </Grid>
                     </div>
                 </div>
                 <div className='parallax'>
