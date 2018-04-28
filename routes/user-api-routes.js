@@ -30,6 +30,11 @@ const db = require("../models");
         db.User.create(req.body)
         .then(dbuser => {
             res.json(dbuser);
+            // res.redirect("/dashboard");
+        })
+        .catch(function(err) {
+            // print the error details
+            console.log(err, req.body);
         });
     });
 
@@ -39,6 +44,7 @@ const db = require("../models");
             include: [db.Mover]
         }).then(usersmovers => {
             res.json(usersmovers);
+            // res.redirect('/dashboard');
         })
     });
 
