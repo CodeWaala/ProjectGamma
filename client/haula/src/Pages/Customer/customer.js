@@ -39,30 +39,20 @@ export class Customer extends Component {
     };
   }
 
-  //   autocomplete() {
-  //     var moveFrom = document.getElementById('moveFrom');
-  //     var moveTo = document.getElementById('moveTo');
-
-  //     var autocomplete = new google.maps.places.Autocomplete(moveFrom);
-
-  //       // Bind the map's bounds (viewport) property to the autocomplete object,
-  //       // so that the autocomplete requests use the current map bounds for the
-  //       // bounds option in the request.
-  //       autocomplete.bindTo('bounds', map);
-
-  //     var autocomplete = new google.maps.places.Autocomplete(moveTo);
-
-  //       // Bind the map's bounds (viewport) property to the autocomplete object,
-  //       // so that the autocomplete requests use the current map bounds for the
-  //       // bounds option in the request.
-  //       autocomplete.bindTo('bounds', map);
-  //   }
+  autocomplete(map) {
+      var moveFrom = this.refs.moveFrom;
+      var moveTo = this.refs.moveTo;
+      console.log("autocomplete");
+      var autocomplete = new google.maps.places.Autocomplete(moveFrom);
+      var autocomplete = new google.maps.places.Autocomplete(moveTo);
+  }
 
   handleClose() {
     this.setState({ show: false });
   }
 
   handleShow() {
+    this.autocomplete();
     this.setState({ show: true });
   }
 
@@ -146,44 +136,14 @@ export class Customer extends Component {
   render() {
     return (
       <div className="flex-box">
-        <div className="flex-1">
-          <Table responsive>
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>Request Name</th>
-                <th>Moving From</th>
-                <th>Moving To</th>
-                <th>Moving Date</th>
-                <th>Expected Price</th>
-                <th>Order Status</th>
-              </tr>
-            </thead>
-            <tbody className="tableBody">
-              {this.state.moverequests.map((request, i) => (
-                <tr>
-                  <td>{request.id}</td>
-                  <td>Customer Name</td>
-                  <td>{request.fromaddress}</td>
-                  <td>{request.toaddress}</td>
-                  <td>Date goes Here</td>
-                  <td>{request.expectedprice}</td>
-                  <td>{request.orderstatus}</td>
-                  <td>
-                    <Button
-                      bsStyle="primary"
-                      bsSize="small"
-                      onClick={() =>
-                        this.handleShowMap(
-                          request.fromaddress,
-                          request.toaddress
-                        )
-                      }
-                    >
-                      Track Request
-                    </Button>
-                  </td>
-                  <Modal show={this.state.show} onHide={this.handleClose}>
+        <div className="Resquest">
+        <Button
+             bsStyle="primary"
+             bsSize="small"
+             onClick={this.handleShow}>
+             Request
+        </Button>
+        <Modal show={this.state.show} onHide={this.handleClose}>
                     <Modal.Header closeButton>
                       <Modal.Title>Request a Move</Modal.Title>
                     </Modal.Header>
@@ -213,6 +173,7 @@ export class Customer extends Component {
                             type="text"
                             class="form-control"
                             id="moveFrom"
+                            ref="moveFrom"
                             placeholder="1 World Way, Los Angeles, CA 90045"
                           />
                           <label
@@ -229,6 +190,7 @@ export class Customer extends Component {
                             type="text"
                             className="form-control"
                             id="moveTo"
+                            ref="moveTo"
                             placeholder="3225 N Harbor Dr, San Diego, CA 92101"
                           />
                           <label
@@ -310,6 +272,44 @@ export class Customer extends Component {
                       <Button onClick={this.handleClose}>Close</Button>
                     </Modal.Footer> */}
                   </Modal>
+        </div>
+        <div className="flex-1">
+          <Table responsive>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Request Name</th>
+                <th>Moving From</th>
+                <th>Moving To</th>
+                <th>Moving Date</th>
+                <th>Expected Price</th>
+                <th>Order Status</th>
+              </tr>
+            </thead>
+            <tbody className="tableBody">
+              {this.state.moverequests.map((request, i) => (
+                <tr>
+                  <td>{request.id}</td>
+                  <td>Customer Name</td>
+                  <td>{request.fromaddress}</td>
+                  <td>{request.toaddress}</td>
+                  <td>Date goes Here</td>
+                  <td>{request.expectedprice}</td>
+                  <td>{request.orderstatus}</td>
+                  <td>
+                    <Button
+                      bsStyle="primary"
+                      bsSize="small"
+                      onClick={() =>
+                        this.handleShowMap(
+                          request.fromaddress,
+                          request.toaddress
+                        )
+                      }
+                    >
+                      Track Request
+                    </Button>
+                  </td>
                 </tr>
               ))}
             </tbody>
